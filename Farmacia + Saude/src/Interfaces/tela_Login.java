@@ -146,12 +146,7 @@ public class tela_Login extends javax.swing.JFrame {
 
     
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
-        if (usuarioInput.getText().equals("luan")&& senhaInput.getText().equals("123")) {
-            new tela_Login().setVisible(false);
-            
-        } else {
-            JOptionPane.showMessageDialog(null, "DENIED ACCESS.");
-        }
+       
     }//GEN-LAST:event_entrarButtonActionPerformed
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
