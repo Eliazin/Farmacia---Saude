@@ -2,10 +2,6 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[650, 450]"/>
-    </Property>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -53,43 +49,45 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="rua" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="emailLabel" min="-2" pref="40" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="340" max="-2" attributes="0"/>
-                                  <Component id="celularLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="ruaInput" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="emailInput" pref="362" max="32767" attributes="0"/>
-                                  <Component id="nomeInput" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="nomeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="bairroLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="bairroInput" min="-2" pref="362" max="-2" attributes="0"/>
+                              <Component id="ruaInput" alignment="0" min="-2" pref="362" max="-2" attributes="0"/>
+                              <Component id="bairroLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="bairroInput" alignment="0" min="-2" pref="362" max="-2" attributes="0"/>
+                              <Component id="rua" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cpfInput" max="32767" attributes="0"/>
                               <Component id="numeroInput" alignment="0" max="32767" attributes="0"/>
-                              <Component id="celularInput" alignment="1" pref="246" max="32767" attributes="0"/>
+                              <Component id="cepInput" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="cepLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cpfLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="numeroLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="numeroLabel" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="cpfLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="cepInput" alignment="0" max="32767" attributes="0"/>
                           </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="emailLabel" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="emailInput" pref="362" max="32767" attributes="0"/>
+                                      <Component id="nomeInput" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="nomeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="celularLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="celularInput" min="-2" pref="246" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -97,7 +95,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                   <Component id="painelBrancoButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="47" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -105,26 +103,27 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nomeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cpfLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="emailInput" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="nomeLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="nomeInput" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="cpfLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="cpfInput" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="celularLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="celularInput" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nomeInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cpfInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="emailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="celularLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="emailInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="celularInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="rua" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="numeroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -191,7 +190,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Email"/>
+            <Property name="text" type="java.lang.String" value="E-mail"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="emailInput">
@@ -323,6 +322,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="LIMPAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limparButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="salvarButton">
               <Properties>
@@ -331,6 +333,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="SALVAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="salvarButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
