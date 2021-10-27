@@ -23,16 +23,20 @@ public class cadastro_Clientes extends javax.swing.JFrame {
         cpfInput = new javax.swing.JFormattedTextField();
         emailLabel = new javax.swing.JLabel();
         emailInput = new javax.swing.JTextField();
-        rua = new javax.swing.JLabel();
+        ruaLabel = new javax.swing.JLabel();
         ruaInput = new javax.swing.JTextField();
-        bairroLabel = new javax.swing.JLabel();
-        bairroInput = new javax.swing.JTextField();
         numeroLabel = new javax.swing.JLabel();
         numeroInput = new javax.swing.JTextField();
         celularLabel = new javax.swing.JLabel();
         celularInput = new javax.swing.JFormattedTextField();
         cepLabel = new javax.swing.JLabel();
-        cepInput = new javax.swing.JTextField();
+        cepInput = new javax.swing.JFormattedTextField();
+        senhaLabel = new javax.swing.JLabel();
+        senhaInput = new javax.swing.JPasswordField();
+        nomeUserLabel = new javax.swing.JLabel();
+        nomeUserInput = new javax.swing.JTextField();
+        bairroLabel = new javax.swing.JLabel();
+        bairroInput = new javax.swing.JTextField();
         painelBrancoButton = new javax.swing.JPanel();
         icone = new javax.swing.JLabel();
         limparButton = new javax.swing.JButton();
@@ -45,11 +49,11 @@ public class cadastro_Clientes extends javax.swing.JFrame {
 
         nomeLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeLabel.setForeground(new java.awt.Color(0, 0, 0));
-        nomeLabel.setText("Nome");
+        nomeLabel.setText("Nome:");
 
         cpfLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         cpfLabel.setForeground(new java.awt.Color(0, 0, 0));
-        cpfLabel.setText("CPF");
+        cpfLabel.setText("CPF:");
 
         try {
             cpfInput.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -59,23 +63,25 @@ public class cadastro_Clientes extends javax.swing.JFrame {
 
         emailLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         emailLabel.setForeground(new java.awt.Color(0, 0, 0));
-        emailLabel.setText("E-mail");
+        emailLabel.setText("E-mail:");
 
-        rua.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
-        rua.setForeground(new java.awt.Color(0, 0, 0));
-        rua.setText("Rua");
+        ruaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        ruaLabel.setForeground(new java.awt.Color(0, 0, 0));
+        ruaLabel.setText("Rua:");
 
-        bairroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
-        bairroLabel.setForeground(new java.awt.Color(0, 0, 0));
-        bairroLabel.setText("Bairro");
+        ruaInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ruaInputActionPerformed(evt);
+            }
+        });
 
         numeroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         numeroLabel.setForeground(new java.awt.Color(0, 0, 0));
-        numeroLabel.setText("Numero");
+        numeroLabel.setText("Numero:");
 
         celularLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         celularLabel.setForeground(new java.awt.Color(0, 0, 0));
-        celularLabel.setText("Celular");
+        celularLabel.setText("Celular:");
 
         try {
             celularInput.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ##### - ####")));
@@ -85,7 +91,29 @@ public class cadastro_Clientes extends javax.swing.JFrame {
 
         cepLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         cepLabel.setForeground(new java.awt.Color(0, 0, 0));
-        cepLabel.setText("CEP");
+        cepLabel.setText("CEP:");
+
+        try {
+            cepInput.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        senhaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        senhaLabel.setForeground(new java.awt.Color(0, 0, 0));
+        senhaLabel.setText("Senha:");
+
+        nomeUserLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeUserLabel.setForeground(new java.awt.Color(0, 0, 0));
+        nomeUserLabel.setText("Nome de Usuario:");
+
+        nomeUserInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        bairroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        bairroLabel.setForeground(new java.awt.Color(0, 0, 0));
+        bairroLabel.setText("Bairro:");
+
+        bairroInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
 
         painelBrancoButton.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -144,80 +172,101 @@ public class cadastro_Clientes extends javax.swing.JFrame {
                 .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelBrancoLayout.createSequentialGroup()
                         .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ruaInput, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bairroLabel)
-                            .addComponent(bairroInput, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rua))
+                            .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(nomeInput, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
+                                .addComponent(nomeLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(nomeUserInput))
+                            .addComponent(nomeUserLabel))
                         .addGap(18, 18, 18)
                         .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cpfInput)
-                            .addComponent(numeroInput)
-                            .addComponent(cepInput)
                             .addGroup(painelBrancoLayout.createSequentialGroup()
                                 .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cepLabel)
-                                    .addComponent(numeroLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(senhaLabel)
                                     .addComponent(cpfLabel))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(painelBrancoLayout.createSequentialGroup()
-                        .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(emailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(painelBrancoLayout.createSequentialGroup()
-                                .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(emailInput, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
-                                    .addComponent(nomeInput)
-                                    .addComponent(nomeLabel, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(18, 18, 18)
-                                .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(celularLabel)
-                                    .addComponent(celularInput, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(senhaInput)))
+                    .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(ruaLabel)
+                        .addGroup(painelBrancoLayout.createSequentialGroup()
+                            .addComponent(ruaInput, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(painelBrancoLayout.createSequentialGroup()
+                                    .addComponent(numeroLabel)
+                                    .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(cepInput)))
+                        .addGroup(painelBrancoLayout.createSequentialGroup()
+                            .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(emailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(emailInput, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(celularInput, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(celularLabel)
+                                .addComponent(cepLabel)))
+                        .addComponent(bairroLabel)
+                        .addGroup(painelBrancoLayout.createSequentialGroup()
+                            .addComponent(bairroInput, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(numeroInput, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
-            .addGroup(painelBrancoLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelBrancoLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(painelBrancoButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(47, 47, 47))
         );
         painelBrancoLayout.setVerticalGroup(
             painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBrancoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(senhaLabel)
+                    .addComponent(nomeUserLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeUserInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(senhaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(painelBrancoLayout.createSequentialGroup()
-                        .addComponent(emailLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(emailInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nomeLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nomeInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelBrancoLayout.createSequentialGroup()
                         .addComponent(cpfLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cpfInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(celularLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(celularInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(cpfInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(12, 12, 12)
                 .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rua)
-                    .addComponent(numeroLabel))
+                    .addComponent(emailLabel)
+                    .addComponent(celularLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(celularInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelBrancoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(ruaLabel))
+                    .addGroup(painelBrancoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cepLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ruaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(numeroInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cepInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bairroLabel)
-                    .addComponent(cepLabel))
+                    .addComponent(numeroLabel)
+                    .addComponent(bairroLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bairroInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cepInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(numeroInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(painelBrancoButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addGap(8, 8, 8))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -236,6 +285,8 @@ public class cadastro_Clientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void limparButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparButtonActionPerformed
+        nomeUserInput.setText("");
+        senhaInput.setText("");
         nomeInput.setText("");
         emailInput.setText("");
         cpfInput.setText("");
@@ -249,6 +300,10 @@ public class cadastro_Clientes extends javax.swing.JFrame {
     private void salvarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarButtonActionPerformed
         
     }//GEN-LAST:event_salvarButtonActionPerformed
+
+    private void ruaInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ruaInputActionPerformed
 
     /**
      * @param args the command line arguments
@@ -290,7 +345,7 @@ public class cadastro_Clientes extends javax.swing.JFrame {
     private javax.swing.JLabel bairroLabel;
     private javax.swing.JFormattedTextField celularInput;
     private javax.swing.JLabel celularLabel;
-    private javax.swing.JTextField cepInput;
+    private javax.swing.JFormattedTextField cepInput;
     private javax.swing.JLabel cepLabel;
     private javax.swing.JFormattedTextField cpfInput;
     private javax.swing.JLabel cpfLabel;
@@ -300,12 +355,16 @@ public class cadastro_Clientes extends javax.swing.JFrame {
     private javax.swing.JButton limparButton;
     private javax.swing.JTextField nomeInput;
     private javax.swing.JLabel nomeLabel;
+    private javax.swing.JTextField nomeUserInput;
+    private javax.swing.JLabel nomeUserLabel;
     private javax.swing.JTextField numeroInput;
     private javax.swing.JLabel numeroLabel;
     private javax.swing.JPanel painelBranco;
     private javax.swing.JPanel painelBrancoButton;
-    private javax.swing.JLabel rua;
     private javax.swing.JTextField ruaInput;
+    private javax.swing.JLabel ruaLabel;
     private javax.swing.JButton salvarButton;
+    private javax.swing.JPasswordField senhaInput;
+    private javax.swing.JLabel senhaLabel;
     // End of variables declaration//GEN-END:variables
 }
