@@ -10,7 +10,6 @@ public class tela_Login extends javax.swing.JFrame {
         initComponents();
     }
 
-    String login, senha;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -36,7 +35,7 @@ public class tela_Login extends javax.swing.JFrame {
 
         usuarioLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         usuarioLabel.setForeground(new java.awt.Color(0, 0, 0));
-        usuarioLabel.setText("E-mail:");
+        usuarioLabel.setText("Usuario:");
 
         usuarioInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         usuarioInput.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +141,7 @@ public class tela_Login extends javax.swing.JFrame {
 
     
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
-       if (login.equals("admin") && senha.equals("123")) {
+       if (usuarioInput.getText().equals("admin") && senhaInput.getText().equals("123")) {
            JOptionPane.showMessageDialog(null, "Seja bem vindo à Farmácia + Saúde!");
        } else {
            JOptionPane.showMessageDialog(null, "E-mail ou senha incorretos.");
@@ -151,7 +150,6 @@ public class tela_Login extends javax.swing.JFrame {
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
         
-        new tela_Login().setVisible(false);
         cadastro_Clientes cadastro = new cadastro_Clientes();
         cadastro.setVisible(true);
     }//GEN-LAST:event_cadastroButtonActionPerformed
