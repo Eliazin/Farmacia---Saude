@@ -6,6 +6,8 @@ import javax.swing.JOptionPane;
 
 public class tela_Login extends javax.swing.JFrame {
     
+    cadastro_Clientes cadastro = new cadastro_Clientes();
+    
     public tela_Login() {
         initComponents();
     }
@@ -150,7 +152,6 @@ public class tela_Login extends javax.swing.JFrame {
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
         
-        cadastro_Clientes cadastro = new cadastro_Clientes();
         cadastro.setVisible(true);
     }//GEN-LAST:event_cadastroButtonActionPerformed
 
