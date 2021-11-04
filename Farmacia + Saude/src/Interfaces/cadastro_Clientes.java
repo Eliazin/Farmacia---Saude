@@ -14,6 +14,17 @@ public class cadastro_Clientes extends javax.swing.JFrame {
         initComponents();
     }
     
+    
+    public boolean checkCampoVazio () {
+        boolean campoVazio = true;
+        
+        if (this.nomeUserInput.getText().equals("") || this.nomeInput.getText().equals("") || this.senhaInput.getText().equals("")) {
+            campoVazio = false;
+        }
+        
+        return campoVazio;
+    }
+    
     private void cadastraCliente(Cliente novoCliente){
         this.conectar.conectaBanco(); 
         
@@ -361,7 +372,12 @@ public class cadastro_Clientes extends javax.swing.JFrame {
     }//GEN-LAST:event_limparButtonActionPerformed
 
     private void salvarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarButtonActionPerformed
-        cadastraCliente(novoCliente);
+        
+        if (checkCampoVazio()) {
+            cadastraCliente(novoCliente);
+        } else {
+            JOptionPane.showMessageDialog(null, "Os campos: Nome de Usuario\nNome\nSenha\nSão obrigatorios!");
+        }
     }//GEN-LAST:event_salvarButtonActionPerformed
 
     private void ruaInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaInputActionPerformed
