@@ -4,14 +4,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
+import projeto_farmacia_mais_saude.Projeto_Farmacia_mais_Saude;
+
 public class tela_Login extends javax.swing.JFrame {
     
     cadastro_Clientes cadastro = new cadastro_Clientes();
+    tela_Menu menu = new tela_Menu();
     
     public tela_Login() {
         initComponents();
     }
-
+    
+    String login, senha;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -143,11 +147,29 @@ public class tela_Login extends javax.swing.JFrame {
 
     
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
-       if (usuarioInput.getText().equals("admin") && senhaInput.getText().equals("123")) {
-           JOptionPane.showMessageDialog(null, "Seja bem vindo à Farmácia + Saúde!");
-       } else {
-           JOptionPane.showMessageDialog(null, "E-mail ou senha incorretos.");
+       
+       login = usuarioInput.getText();
+       senha = senhaInput.getText();
+       
+       switch(login) {
+           
+           case "roberto":
+               
+               if(senha.equals("1234")) {
+                   JOptionPane.showMessageDialog(null, login + ", seja bem vindo à Farmácia + Saúde!");
+               } break;
+               
+           case "admin":
+               
+               if(senha.equals("admin")) {
+                   this.dispose(); menu.setVisible(true);
+               } break;
+               
+           default:
+               
+               JOptionPane.showMessageDialog(null, "E-mail ou senha incorretos."); break;
        }
+       
     }//GEN-LAST:event_entrarButtonActionPerformed
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
@@ -189,7 +211,9 @@ public class tela_Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tela_Login().setVisible(true);
+                tela_Login telaLogin = new tela_Login();
+                telaLogin.setVisible(true);
+
             }
         });
     }
