@@ -1,10 +1,10 @@
 package Interfaces;
 
+import Interfaces_adm.tela_Menu;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-import projeto_farmacia_mais_saude.Projeto_Farmacia_mais_Saude;
 
 public class tela_Login extends javax.swing.JFrame {
     
@@ -157,13 +157,17 @@ public class tela_Login extends javax.swing.JFrame {
                
                if(senha.equals("1234")) {
                    JOptionPane.showMessageDialog(null, login + ", seja bem vindo à Farmácia + Saúde!");
-               } break;
+               } else {
+                   JOptionPane.showMessageDialog(null, "Usuario ou senha incorretos!!");
+               }break;
                
            case "admin":
                
                if(senha.equals("admin")) {
                    this.dispose(); menu.setVisible(true);
-               } break;
+               } else {
+                   JOptionPane.showMessageDialog(null, "Usuario ou senha incorretos!!");
+               }break;
                
            default:
                
@@ -173,7 +177,6 @@ public class tela_Login extends javax.swing.JFrame {
     }//GEN-LAST:event_entrarButtonActionPerformed
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
-        
         cadastro.setVisible(true);
     }//GEN-LAST:event_cadastroButtonActionPerformed
 
