@@ -18,7 +18,10 @@ public class cadastro_Clientes extends javax.swing.JFrame {
     public boolean checkCampoVazio () {
         boolean campoVazio = true;
         
-        if (this.nomeUserInput.getText().equals("") || this.nomeInput.getText().equals("") || this.senhaInput.getText().equals("")) {
+        if (this.nomeUserInput.getText().equals("") || 
+            this.nomeInput.getText().equals("") ||
+            this.senhaInput.getText().equals("") ||
+            this.cpfInput.getText() .equals("   .   .   -  ")) {
             campoVazio = false;
         }
         
@@ -124,10 +127,12 @@ public class cadastro_Clientes extends javax.swing.JFrame {
         limparButton = new javax.swing.JButton();
         salvarButton = new javax.swing.JButton();
 
+        setTitle("CADASTRO DE CLIENTES");
         setResizable(false);
 
         painelBranco.setBackground(new java.awt.Color(255, 255, 255));
         painelBranco.setForeground(new java.awt.Color(0, 0, 0));
+        painelBranco.setPreferredSize(new java.awt.Dimension(650, 450));
 
         nomeLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeLabel.setForeground(new java.awt.Color(0, 0, 0));

@@ -9,6 +9,10 @@ public class tela_Menu extends javax.swing.JFrame {
     tela_Cli_Consultar  telaCliConsultar    = new tela_Cli_Consultar();
     tela_Cli_Atualizar  telaCliAtualizar    = new tela_Cli_Atualizar();
     tela_Cli_Deletar    telaCliDeletar      = new tela_Cli_Deletar();
+    tela_Forn_Cadastrar telaFornCadastrar   = new tela_Forn_Cadastrar();
+    tela_Forn_Consultar telaFornConsultar   = new tela_Forn_Consultar();
+    tela_Forn_Atualizar telaFornAtualizar   = new tela_Forn_Atualizar();
+    tela_Forn_Deletar   telaFornDeletar     = new tela_Forn_Deletar();
     
     public tela_Menu() {
         initComponents();
@@ -27,10 +31,10 @@ public class tela_Menu extends javax.swing.JFrame {
         clientesLabel = new javax.swing.JLabel();
         painelFornecedores = new javax.swing.JPanel();
         fornecedoresLabel = new javax.swing.JLabel();
-        cadastrarProdButton2 = new javax.swing.JButton();
-        consultarProdButton2 = new javax.swing.JButton();
-        atualizarProdButton2 = new javax.swing.JButton();
-        deletarProdButton2 = new javax.swing.JButton();
+        cadastrarFornButton2 = new javax.swing.JButton();
+        consultarFornButton2 = new javax.swing.JButton();
+        atualizarFornButton2 = new javax.swing.JButton();
+        deletarFornButton2 = new javax.swing.JButton();
         painelProdutos = new javax.swing.JPanel();
         cadastrarProdButton = new javax.swing.JButton();
         consultarProdButton = new javax.swing.JButton();
@@ -40,11 +44,11 @@ public class tela_Menu extends javax.swing.JFrame {
         produtosLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MENU");
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
         painelBranco.setBackground(new java.awt.Color(255, 255, 255));
-        painelBranco.setBorder(javax.swing.BorderFactory.createTitledBorder("Menu"));
 
         painelClientes.setBackground(new java.awt.Color(255, 255, 255));
         painelClientes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -114,7 +118,7 @@ public class tela_Menu extends javax.swing.JFrame {
                 .addComponent(atualizarCliButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(deletarCliButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         painelFornecedores.setBackground(new java.awt.Color(255, 255, 255));
@@ -123,13 +127,33 @@ public class tela_Menu extends javax.swing.JFrame {
 
         fornecedoresLabel.setText("FORNECEDORES");
 
-        cadastrarProdButton2.setText("Cadastrar");
+        cadastrarFornButton2.setText("Cadastrar");
+        cadastrarFornButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarFornButton2ActionPerformed(evt);
+            }
+        });
 
-        consultarProdButton2.setText("Consultar");
+        consultarFornButton2.setText("Consultar");
+        consultarFornButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultarFornButton2ActionPerformed(evt);
+            }
+        });
 
-        atualizarProdButton2.setText("Atualizar");
+        atualizarFornButton2.setText("Atualizar");
+        atualizarFornButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atualizarFornButton2ActionPerformed(evt);
+            }
+        });
 
-        deletarProdButton2.setText("Deletar");
+        deletarFornButton2.setText("Deletar");
+        deletarFornButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deletarFornButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelFornecedoresLayout = new javax.swing.GroupLayout(painelFornecedores);
         painelFornecedores.setLayout(painelFornecedoresLayout);
@@ -139,20 +163,20 @@ public class tela_Menu extends javax.swing.JFrame {
                 .addGroup(painelFornecedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelFornecedoresLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(atualizarProdButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(atualizarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(fornecedoresLabel)
                         .addGap(0, 21, Short.MAX_VALUE))
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(cadastrarProdButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(cadastrarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(consultarProdButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(consultarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(deletarProdButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(deletarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         painelFornecedoresLayout.setVerticalGroup(
@@ -161,14 +185,14 @@ public class tela_Menu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(fornecedoresLabel)
                 .addGap(31, 31, 31)
-                .addComponent(cadastrarProdButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cadastrarFornButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(consultarProdButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(consultarFornButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(atualizarProdButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(atualizarFornButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(deletarProdButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(deletarFornButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         painelProdutos.setBackground(new java.awt.Color(255, 255, 255));
@@ -228,25 +252,23 @@ public class tela_Menu extends javax.swing.JFrame {
         painelBrancoLayout.setHorizontalGroup(
             painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBrancoLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(34, 34, 34)
                 .addComponent(painelClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addGap(50, 50, 50)
                 .addComponent(painelFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(painelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+                .addGap(39, 39, 39))
         );
         painelBrancoLayout.setVerticalGroup(
             painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBrancoLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(23, 23, 23)
                 .addGroup(painelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelBrancoLayout.createSequentialGroup()
-                        .addComponent(painelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(painelClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(painelFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(painelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(painelFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(painelClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -279,6 +301,22 @@ public class tela_Menu extends javax.swing.JFrame {
     private void deletarCliButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletarCliButton1ActionPerformed
         telaCliDeletar.setVisible(true);
     }//GEN-LAST:event_deletarCliButton1ActionPerformed
+
+    private void cadastrarFornButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarFornButton2ActionPerformed
+        telaFornCadastrar.setVisible(true);
+    }//GEN-LAST:event_cadastrarFornButton2ActionPerformed
+
+    private void consultarFornButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarFornButton2ActionPerformed
+        telaFornConsultar.setVisible(true);
+    }//GEN-LAST:event_consultarFornButton2ActionPerformed
+
+    private void atualizarFornButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atualizarFornButton2ActionPerformed
+        telaFornAtualizar.setVisible(true);
+    }//GEN-LAST:event_atualizarFornButton2ActionPerformed
+
+    private void deletarFornButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletarFornButton2ActionPerformed
+        telaFornDeletar.setVisible(true);
+    }//GEN-LAST:event_deletarFornButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -317,19 +355,19 @@ public class tela_Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atualizarCliButton1;
+    private javax.swing.JButton atualizarFornButton2;
     private javax.swing.JButton atualizarProdButton;
-    private javax.swing.JButton atualizarProdButton2;
     private javax.swing.JButton cadastrarCliButton1;
+    private javax.swing.JButton cadastrarFornButton2;
     private javax.swing.JButton cadastrarProdButton;
-    private javax.swing.JButton cadastrarProdButton2;
     private javax.swing.JButton catalogoProdButton;
     private javax.swing.JLabel clientesLabel;
     private javax.swing.JButton consultarCliButton1;
+    private javax.swing.JButton consultarFornButton2;
     private javax.swing.JButton consultarProdButton;
-    private javax.swing.JButton consultarProdButton2;
     private javax.swing.JButton deletarCliButton1;
+    private javax.swing.JButton deletarFornButton2;
     private javax.swing.JButton deletarProdButton;
-    private javax.swing.JButton deletarProdButton2;
     private javax.swing.JLabel fornecedoresLabel;
     private javax.swing.JPanel painelBranco;
     private javax.swing.JPanel painelClientes;

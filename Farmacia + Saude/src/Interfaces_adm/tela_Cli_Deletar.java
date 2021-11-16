@@ -133,19 +133,20 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
         cepOutput = new javax.swing.JFormattedTextField();
         procurarButton = new javax.swing.JButton();
 
+        setTitle("DELETAR CLIENTE");
+
         panelBranco.setBackground(new java.awt.Color(255, 255, 255));
-        panelBranco.setBorder(javax.swing.BorderFactory.createTitledBorder("Consultar Clientes"));
 
         cpfLabel.setText("CPF");
 
-        deletarButton.setText("Deletar");
+        deletarButton.setText("DELETAR");
         deletarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deletarButtonActionPerformed(evt);
             }
         });
 
-        limparButton.setText("Limpar");
+        limparButton.setText("LIMPAR");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limparButtonActionPerformed(evt);
@@ -226,7 +227,7 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
                         .addComponent(ruaLabel, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(ruaOutput))
                     .addComponent(numeroLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(dadosPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cepLabel)
                     .addComponent(bairroLabel)
@@ -298,29 +299,29 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
                         .addComponent(cpfInput, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(procurarButton)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 121, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(panelBrancoLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
+                .addGap(88, 88, 88)
                 .addComponent(deletarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(limparButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(95, 95, 95))
         );
         panelBrancoLayout.setVerticalGroup(
             panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBrancoLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addGroup(panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cpfLabel)
                     .addComponent(cpfInput, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfLabel)
                     .addComponent(procurarButton))
                 .addGap(18, 18, 18)
                 .addComponent(dadosPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addGroup(panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(deletarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(limparButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(limparButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deletarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31))
         );
 
