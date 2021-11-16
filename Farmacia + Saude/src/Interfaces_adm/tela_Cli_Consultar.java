@@ -110,21 +110,21 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         cepLabel = new javax.swing.JLabel();
         cepOutput = new javax.swing.JFormattedTextField();
 
+        setTitle("CONSULTAR CLIENTE");
         setResizable(false);
 
         panelBranco.setBackground(new java.awt.Color(255, 255, 255));
-        panelBranco.setBorder(javax.swing.BorderFactory.createTitledBorder("Consultar Clientes"));
 
         cpfLabel.setText("CPF");
 
-        consultarButton.setText("Consultar");
+        consultarButton.setText("CONSULTAR");
         consultarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 consultarButtonActionPerformed(evt);
             }
         });
 
-        limparButton.setText("Limpar");
+        limparButton.setText("LIMPAR");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limparButtonActionPerformed(evt);
@@ -141,17 +141,17 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
 
         nomeUserLabel.setText("Nome de Usuario: ");
 
-        nomeUserOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
+        nomeUserOutput.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         nomeUserOutput.setEnabled(false);
 
         nomeLabel.setText("Nome: ");
 
-        nomeOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
+        nomeOutput.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         nomeOutput.setEnabled(false);
 
         emailLabel.setText("E-mail: ");
 
-        emailOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
+        emailOutput.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         emailOutput.setEnabled(false);
 
         celularLabel.setText("Celular: ");
@@ -205,7 +205,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
                         .addComponent(ruaLabel, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(ruaOutput))
                     .addComponent(numeroLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(dadosPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cepLabel)
                     .addComponent(bairroLabel)
@@ -273,23 +273,23 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
             .addGroup(panelBrancoLayout.createSequentialGroup()
                 .addGap(89, 89, 89)
                 .addComponent(consultarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
                 .addComponent(limparButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(95, 95, 95))
         );
         panelBrancoLayout.setVerticalGroup(
             panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBrancoLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(33, 33, 33)
                 .addGroup(panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cpfLabel)
-                    .addComponent(cpfInput, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(cpfInput, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfLabel))
+                .addGap(21, 21, 21)
                 .addComponent(dadosPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addGroup(panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(consultarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(limparButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(limparButton, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(consultarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31))
         );
 
