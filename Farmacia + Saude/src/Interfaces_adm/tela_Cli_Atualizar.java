@@ -88,8 +88,11 @@ public class tela_Cli_Atualizar extends javax.swing.JFrame {
 
         panelBranco.setBackground(new java.awt.Color(255, 255, 255));
 
+        cpfLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cpfLabel.setForeground(new java.awt.Color(0, 0, 0));
         cpfLabel.setText("CPF");
 
+        atualizarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         atualizarButton.setText("ATUALIZAR");
         atualizarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +100,7 @@ public class tela_Cli_Atualizar extends javax.swing.JFrame {
             }
         });
 
+        limparButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         limparButton.setText("LIMPAR");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,18 +117,29 @@ public class tela_Cli_Atualizar extends javax.swing.JFrame {
         dadosPainel.setBackground(new java.awt.Color(255, 255, 255));
         dadosPainel.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
 
+        nomeUserLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeUserLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeUserLabel.setText("Nome de Usuario: ");
 
+        nomeUserInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeUserInput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
 
+        nomeLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeLabel.setText("Nome: ");
 
+        nomeInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeInput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
 
+        emailLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        emailLabel.setForeground(new java.awt.Color(0, 0, 0));
         emailLabel.setText("E-mail: ");
 
+        emailInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         emailInput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
 
+        celularLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        celularLabel.setForeground(new java.awt.Color(0, 0, 0));
         celularLabel.setText("Celular: ");
 
         try {
@@ -134,18 +149,29 @@ public class tela_Cli_Atualizar extends javax.swing.JFrame {
         }
         celularInput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
 
+        ruaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        ruaLabel.setForeground(new java.awt.Color(0, 0, 0));
         ruaLabel.setText("Rua: ");
 
+        ruaInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         ruaInput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
 
+        bairroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        bairroLabel.setForeground(new java.awt.Color(0, 0, 0));
         bairroLabel.setText("Bairro: ");
 
+        bairroInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         bairroInput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
 
+        numeroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        numeroLabel.setForeground(new java.awt.Color(0, 0, 0));
         numeroLabel.setText("Número:");
 
+        numeroInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         numeroInput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
 
+        cepLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cepLabel.setForeground(new java.awt.Color(0, 0, 0));
         cepLabel.setText("CEP: ");
 
         try {
@@ -253,7 +279,7 @@ public class tela_Cli_Atualizar extends javax.swing.JFrame {
                 .addComponent(dadosPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addGroup(panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(limparButton, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(limparButton, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
                     .addComponent(atualizarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31))
         );

@@ -164,6 +164,7 @@ public class tela_Forn_Deletar extends javax.swing.JFrame {
         painelPrincipal.setMinimumSize(new java.awt.Dimension(0, 0));
         painelPrincipal.setPreferredSize(new java.awt.Dimension(654, 450));
 
+        deletarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         deletarButton.setText("DELETAR");
         deletarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,6 +172,7 @@ public class tela_Forn_Deletar extends javax.swing.JFrame {
             }
         });
 
+        limparButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         limparButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Limpar.png"))); // NOI18N
         limparButton.setText("LIMPAR");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
@@ -179,6 +181,7 @@ public class tela_Forn_Deletar extends javax.swing.JFrame {
             }
         });
 
+        cnpjLabel.setForeground(new java.awt.Color(0, 0, 0));
         cnpjLabel.setText("CNPJ:");
 
         try {
@@ -187,6 +190,7 @@ public class tela_Forn_Deletar extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        procurarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         procurarButton.setText("Procurar");
         procurarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,28 +198,39 @@ public class tela_Forn_Deletar extends javax.swing.JFrame {
             }
         });
 
+        painelSec.setBackground(new java.awt.Color(255, 255, 255));
         painelSec.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelSec.setForeground(new java.awt.Color(0, 0, 0));
 
+        fonecedorLabel.setForeground(new java.awt.Color(0, 0, 0));
         fonecedorLabel.setText("Fornecedor:");
 
+        fornecedorOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         fornecedorOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         fornecedorOutput.setEnabled(false);
 
+        nomeFantLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeFantLabel.setText("Nome Fantasia:");
 
+        nomeFantOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeFantOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         nomeFantOutput.setEnabled(false);
 
+        inscEstadualLabel.setForeground(new java.awt.Color(0, 0, 0));
         inscEstadualLabel.setText("Inscrição Estadual:");
 
+        inscEstadualOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         inscEstadualOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         inscEstadualOutput.setEnabled(false);
 
+        emailLabel.setForeground(new java.awt.Color(0, 0, 0));
         emailLabel.setText("E-mail:");
 
+        emailOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         emailOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         emailOutput.setEnabled(false);
 
+        celularLabel.setForeground(new java.awt.Color(0, 0, 0));
         celularLabel.setText("Celular:");
 
         try {
@@ -226,36 +241,49 @@ public class tela_Forn_Deletar extends javax.swing.JFrame {
         celularOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         celularOutput.setEnabled(false);
 
+        telefoneLabel.setForeground(new java.awt.Color(0, 0, 0));
         telefoneLabel.setText("Telefone:");
 
+        telefoneOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         telefoneOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         telefoneOutput.setEnabled(false);
 
+        enderecoLabel.setForeground(new java.awt.Color(0, 0, 0));
         enderecoLabel.setText("Endereço:");
 
+        enderecoOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         enderecoOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         enderecoOutput.setEnabled(false);
 
+        numeroLabel.setForeground(new java.awt.Color(0, 0, 0));
         numeroLabel.setText("Numero:");
 
+        numeroOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         numeroOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         numeroOutput.setEnabled(false);
 
+        bairroLabel.setForeground(new java.awt.Color(0, 0, 0));
         bairroLabel.setText("Bairro:");
 
+        bairroOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         bairroOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         bairroOutput.setEnabled(false);
 
+        cidadeLabel.setForeground(new java.awt.Color(0, 0, 0));
         cidadeLabel.setText("Cidade:");
 
+        cidadeOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         cidadeOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         cidadeOutput.setEnabled(false);
 
+        ufLabel.setForeground(new java.awt.Color(0, 0, 0));
         ufLabel.setText("UF:");
 
+        ufOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         ufOutput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         ufOutput.setEnabled(false);
 
+        cepLabel.setForeground(new java.awt.Color(0, 0, 0));
         cepLabel.setText("CEP:");
 
         try {
@@ -413,7 +441,7 @@ public class tela_Forn_Deletar extends javax.swing.JFrame {
                         .addComponent(procurarButton)))
                 .addGap(18, 18, 18)
                 .addComponent(painelSec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deletarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(limparButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))

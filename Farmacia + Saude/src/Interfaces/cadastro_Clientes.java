@@ -379,7 +379,7 @@ public class cadastro_Clientes extends javax.swing.JFrame {
         if (checkCampoVazio()) {
             cadastraCliente(novoCliente);
         } else {
-            JOptionPane.showMessageDialog(null, "Os campos: Nome de Usuario\nNome\nSenha\nSão obrigatorios!");
+            JOptionPane.showMessageDialog(null, "Os campos: Nome de Usuario\nNome\nSenha\nCPF\nSão obrigatorios!");
         }
     }//GEN-LAST:event_salvarButtonActionPerformed
 
