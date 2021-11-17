@@ -54,6 +54,7 @@ public class tela_Menu extends javax.swing.JFrame {
         painelClientes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         painelClientes.setPreferredSize(new java.awt.Dimension(159, 402));
 
+        cadastrarCliButton1.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         cadastrarCliButton1.setText("Cadastrar");
         cadastrarCliButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,6 +62,7 @@ public class tela_Menu extends javax.swing.JFrame {
             }
         });
 
+        consultarCliButton1.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         consultarCliButton1.setText("Consultar");
         consultarCliButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +70,7 @@ public class tela_Menu extends javax.swing.JFrame {
             }
         });
 
+        atualizarCliButton1.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         atualizarCliButton1.setText("Atualizar");
         atualizarCliButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +78,7 @@ public class tela_Menu extends javax.swing.JFrame {
             }
         });
 
+        deletarCliButton1.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         deletarCliButton1.setText("Deletar");
         deletarCliButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +86,8 @@ public class tela_Menu extends javax.swing.JFrame {
             }
         });
 
+        clientesLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        clientesLabel.setForeground(new java.awt.Color(0, 0, 0));
         clientesLabel.setText("CLIENTES");
 
         javax.swing.GroupLayout painelClientesLayout = new javax.swing.GroupLayout(painelClientes);
@@ -99,7 +105,7 @@ public class tela_Menu extends javax.swing.JFrame {
                         .addGroup(painelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(atualizarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(consultarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cadastrarCliButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)))
+                            .addComponent(cadastrarCliButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)))
                     .addGroup(painelClientesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(deletarCliButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -110,7 +116,7 @@ public class tela_Menu extends javax.swing.JFrame {
             .addGroup(painelClientesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(clientesLabel)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(cadastrarCliButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(consultarCliButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -118,15 +124,18 @@ public class tela_Menu extends javax.swing.JFrame {
                 .addComponent(atualizarCliButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(deletarCliButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         painelFornecedores.setBackground(new java.awt.Color(255, 255, 255));
         painelFornecedores.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         painelFornecedores.setPreferredSize(new java.awt.Dimension(159, 402));
 
+        fornecedoresLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        fornecedoresLabel.setForeground(new java.awt.Color(0, 0, 0));
         fornecedoresLabel.setText("FORNECEDORES");
 
+        cadastrarFornButton2.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         cadastrarFornButton2.setText("Cadastrar");
         cadastrarFornButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +143,7 @@ public class tela_Menu extends javax.swing.JFrame {
             }
         });
 
+        consultarFornButton2.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         consultarFornButton2.setText("Consultar");
         consultarFornButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,6 +151,7 @@ public class tela_Menu extends javax.swing.JFrame {
             }
         });
 
+        atualizarFornButton2.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         atualizarFornButton2.setText("Atualizar");
         atualizarFornButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,6 +159,7 @@ public class tela_Menu extends javax.swing.JFrame {
             }
         });
 
+        deletarFornButton2.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         deletarFornButton2.setText("Deletar");
         deletarFornButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,7 +179,7 @@ public class tela_Menu extends javax.swing.JFrame {
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(fornecedoresLabel)
-                        .addGap(0, 21, Short.MAX_VALUE))
+                        .addGap(0, 30, Short.MAX_VALUE))
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(cadastrarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -184,7 +196,7 @@ public class tela_Menu extends javax.swing.JFrame {
             .addGroup(painelFornecedoresLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(fornecedoresLabel)
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
                 .addComponent(cadastrarFornButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(consultarFornButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -192,23 +204,30 @@ public class tela_Menu extends javax.swing.JFrame {
                 .addComponent(atualizarFornButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(deletarFornButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         painelProdutos.setBackground(new java.awt.Color(255, 255, 255));
         painelProdutos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         painelProdutos.setPreferredSize(new java.awt.Dimension(159, 402));
 
+        cadastrarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         cadastrarProdButton.setText("Cadastrar");
 
+        consultarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         consultarProdButton.setText("Consultar");
 
+        atualizarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         atualizarProdButton.setText("Atualizar");
 
+        deletarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         deletarProdButton.setText("Deletar");
 
+        catalogoProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         catalogoProdButton.setText("Catalogo");
 
+        produtosLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        produtosLabel.setForeground(new java.awt.Color(0, 0, 0));
         produtosLabel.setText("PRODUTOS");
 
         javax.swing.GroupLayout painelProdutosLayout = new javax.swing.GroupLayout(painelProdutos);
@@ -227,14 +246,14 @@ public class tela_Menu extends javax.swing.JFrame {
             .addGroup(painelProdutosLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(produtosLabel)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         painelProdutosLayout.setVerticalGroup(
             painelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelProdutosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(produtosLabel)
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
                 .addComponent(cadastrarProdButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(consultarProdButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -244,7 +263,7 @@ public class tela_Menu extends javax.swing.JFrame {
                 .addComponent(deletarProdButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(catalogoProdButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout painelBrancoLayout = new javax.swing.GroupLayout(painelBranco);

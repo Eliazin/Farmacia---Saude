@@ -115,8 +115,11 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
 
         panelBranco.setBackground(new java.awt.Color(255, 255, 255));
 
+        cpfLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cpfLabel.setForeground(new java.awt.Color(0, 0, 0));
         cpfLabel.setText("CPF");
 
+        consultarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         consultarButton.setText("CONSULTAR");
         consultarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,6 +127,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
             }
         });
 
+        limparButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         limparButton.setText("LIMPAR");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,23 +141,35 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        dadosPainel.setBackground(new java.awt.Color(255, 255, 255));
         dadosPainel.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
 
+        nomeUserLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeUserLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeUserLabel.setText("Nome de Usuario: ");
 
+        nomeUserOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeUserOutput.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         nomeUserOutput.setEnabled(false);
 
+        nomeLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeLabel.setText("Nome: ");
 
+        nomeOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeOutput.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         nomeOutput.setEnabled(false);
 
+        emailLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        emailLabel.setForeground(new java.awt.Color(0, 0, 0));
         emailLabel.setText("E-mail: ");
 
+        emailOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         emailOutput.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         emailOutput.setEnabled(false);
 
+        celularLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        celularLabel.setForeground(new java.awt.Color(0, 0, 0));
         celularLabel.setText("Celular: ");
 
         try {
@@ -164,21 +180,32 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         celularOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         celularOutput.setEnabled(false);
 
+        ruaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        ruaLabel.setForeground(new java.awt.Color(0, 0, 0));
         ruaLabel.setText("Rua: ");
 
+        ruaOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         ruaOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         ruaOutput.setEnabled(false);
 
+        bairroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        bairroLabel.setForeground(new java.awt.Color(0, 0, 0));
         bairroLabel.setText("Bairro: ");
 
+        bairroOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         bairroOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         bairroOutput.setEnabled(false);
 
+        numeroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        numeroLabel.setForeground(new java.awt.Color(0, 0, 0));
         numeroLabel.setText("Número:");
 
+        numeroOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         numeroOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         numeroOutput.setEnabled(false);
 
+        cepLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cepLabel.setForeground(new java.awt.Color(0, 0, 0));
         cepLabel.setText("CEP: ");
 
         try {
@@ -288,7 +315,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
                 .addComponent(dadosPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addGroup(panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(limparButton, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(limparButton, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
                     .addComponent(consultarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31))
         );

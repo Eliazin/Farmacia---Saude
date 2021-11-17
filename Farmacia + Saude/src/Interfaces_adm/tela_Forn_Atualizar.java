@@ -106,6 +106,7 @@ public class tela_Forn_Atualizar extends javax.swing.JFrame {
         painelPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         painelPrincipal.setMinimumSize(new java.awt.Dimension(0, 0));
 
+        atualizarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         atualizarButton.setText("ATUALIZAR");
         atualizarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +114,7 @@ public class tela_Forn_Atualizar extends javax.swing.JFrame {
             }
         });
 
+        limparButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         limparButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Limpar.png"))); // NOI18N
         limparButton.setText("LIMPAR");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +123,8 @@ public class tela_Forn_Atualizar extends javax.swing.JFrame {
             }
         });
 
+        cnpjLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cnpjLabel.setForeground(new java.awt.Color(0, 0, 0));
         cnpjLabel.setText("CNPJ:");
 
         try {
@@ -129,16 +133,35 @@ public class tela_Forn_Atualizar extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        fonecedorLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        fonecedorLabel.setForeground(new java.awt.Color(0, 0, 0));
         fonecedorLabel.setText("Fornecedor:");
 
+        fornecedorInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        nomeFantLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeFantLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeFantLabel.setText("Nome Fantasia:");
 
+        nomeFantInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        inscEstadualLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        inscEstadualLabel.setForeground(new java.awt.Color(0, 0, 0));
         inscEstadualLabel.setText("Inscrição Estadual:");
 
+        inscEstadualInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        emailLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        emailLabel.setForeground(new java.awt.Color(0, 0, 0));
         emailLabel.setText("E-mail:");
 
+        emailInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        celularLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        celularLabel.setForeground(new java.awt.Color(0, 0, 0));
         celularLabel.setText("Celular:");
 
         try {
@@ -147,18 +170,44 @@ public class tela_Forn_Atualizar extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        telefoneLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        telefoneLabel.setForeground(new java.awt.Color(0, 0, 0));
         telefoneLabel.setText("Telefone:");
 
+        telefoneInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        enderecoLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        enderecoLabel.setForeground(new java.awt.Color(0, 0, 0));
         enderecoLabel.setText("Endereço:");
 
+        enderecoInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        numeroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        numeroLabel.setForeground(new java.awt.Color(0, 0, 0));
         numeroLabel.setText("Numero:");
 
+        numeroInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        bairroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        bairroLabel.setForeground(new java.awt.Color(0, 0, 0));
         bairroLabel.setText("Bairro:");
 
+        bairroInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        cidadeLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cidadeLabel.setForeground(new java.awt.Color(0, 0, 0));
         cidadeLabel.setText("Cidade:");
 
+        cidadeInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        ufLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        ufLabel.setForeground(new java.awt.Color(0, 0, 0));
         ufLabel.setText("UF:");
 
+        ufInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        cepLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cepLabel.setForeground(new java.awt.Color(0, 0, 0));
         cepLabel.setText("CEP:");
 
         try {
@@ -308,7 +357,7 @@ public class tela_Forn_Atualizar extends javax.swing.JFrame {
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cnpjInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cnpjLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

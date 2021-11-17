@@ -137,8 +137,11 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
 
         panelBranco.setBackground(new java.awt.Color(255, 255, 255));
 
+        cpfLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cpfLabel.setForeground(new java.awt.Color(0, 0, 0));
         cpfLabel.setText("CPF");
 
+        deletarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         deletarButton.setText("DELETAR");
         deletarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +149,7 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
             }
         });
 
+        limparButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         limparButton.setText("LIMPAR");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,23 +163,35 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        dadosPainel.setBackground(new java.awt.Color(255, 255, 255));
         dadosPainel.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
 
+        nomeUserLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeUserLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeUserLabel.setText("Nome de Usuario: ");
 
+        nomeUserOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeUserOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         nomeUserOutput.setEnabled(false);
 
+        nomeLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeLabel.setText("Nome: ");
 
+        nomeOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         nomeOutput.setEnabled(false);
 
+        emailLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        emailLabel.setForeground(new java.awt.Color(0, 0, 0));
         emailLabel.setText("E-mail: ");
 
+        emailOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         emailOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         emailOutput.setEnabled(false);
 
+        celularLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        celularLabel.setForeground(new java.awt.Color(0, 0, 0));
         celularLabel.setText("Celular: ");
 
         try {
@@ -186,21 +202,32 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
         celularOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         celularOutput.setEnabled(false);
 
+        ruaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        ruaLabel.setForeground(new java.awt.Color(0, 0, 0));
         ruaLabel.setText("Rua: ");
 
+        ruaOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         ruaOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         ruaOutput.setEnabled(false);
 
+        bairroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        bairroLabel.setForeground(new java.awt.Color(0, 0, 0));
         bairroLabel.setText("Bairro: ");
 
+        bairroOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         bairroOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         bairroOutput.setEnabled(false);
 
+        numeroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        numeroLabel.setForeground(new java.awt.Color(0, 0, 0));
         numeroLabel.setText("Número:");
 
+        numeroOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         numeroOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         numeroOutput.setEnabled(false);
 
+        cepLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cepLabel.setForeground(new java.awt.Color(0, 0, 0));
         cepLabel.setText("CEP: ");
 
         try {
@@ -277,6 +304,7 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        procurarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         procurarButton.setText("Procurar");
         procurarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,7 +327,7 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
                         .addComponent(cpfInput, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(procurarButton)
-                        .addGap(0, 121, Short.MAX_VALUE)))
+                        .addGap(0, 132, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(panelBrancoLayout.createSequentialGroup()
                 .addGap(88, 88, 88)
@@ -311,7 +339,7 @@ public class tela_Cli_Deletar extends javax.swing.JFrame {
         panelBrancoLayout.setVerticalGroup(
             panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBrancoLayout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(panelBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cpfInput, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cpfLabel)

@@ -143,12 +143,26 @@ public class tela_Forn_Cadastrar extends javax.swing.JFrame {
         painelPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         painelPrincipal.setMinimumSize(new java.awt.Dimension(0, 0));
 
+        fonecedorLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        fonecedorLabel.setForeground(new java.awt.Color(0, 0, 0));
         fonecedorLabel.setText("Fornecedor:");
 
+        fornecedorInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        nomeFantLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeFantLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeFantLabel.setText("Nome Fantasia:");
 
+        nomeFantInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        emailLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        emailLabel.setForeground(new java.awt.Color(0, 0, 0));
         emailLabel.setText("E-mail:");
 
+        emailInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        cnpjLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cnpjLabel.setForeground(new java.awt.Color(0, 0, 0));
         cnpjLabel.setText("CNPJ:");
 
         try {
@@ -157,8 +171,14 @@ public class tela_Forn_Cadastrar extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        inscEstLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        inscEstLabel.setForeground(new java.awt.Color(0, 0, 0));
         inscEstLabel.setText("Inscrição Estadual:");
 
+        inscEstInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        celularLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        celularLabel.setForeground(new java.awt.Color(0, 0, 0));
         celularLabel.setText("Celular:");
 
         try {
@@ -167,18 +187,44 @@ public class tela_Forn_Cadastrar extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        telefoneLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        telefoneLabel.setForeground(new java.awt.Color(0, 0, 0));
         telefoneLabel.setText("Telefone:");
 
+        telefoneInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        enderecoLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        enderecoLabel.setForeground(new java.awt.Color(0, 0, 0));
         enderecoLabel.setText("Endereço:");
 
+        enderecoInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        numeroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        numeroLabel.setForeground(new java.awt.Color(0, 0, 0));
         numeroLabel.setText("Numero:");
 
+        numeroInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        bairroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        bairroLabel.setForeground(new java.awt.Color(0, 0, 0));
         bairroLabel.setText("Bairro:");
 
+        bairroInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        cidadeLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cidadeLabel.setForeground(new java.awt.Color(0, 0, 0));
         cidadeLabel.setText("Cidade:");
 
+        cidadeInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        ufLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        ufLabel.setForeground(new java.awt.Color(0, 0, 0));
         ufLabel.setText("UF:");
 
+        ufInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
+        cepLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        cepLabel.setForeground(new java.awt.Color(0, 0, 0));
         cepLabel.setText("CEP:");
 
         try {
@@ -187,6 +233,7 @@ public class tela_Forn_Cadastrar extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        salvarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         salvarButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Salvar.png"))); // NOI18N
         salvarButton.setText("SALVAR");
         salvarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -195,6 +242,7 @@ public class tela_Forn_Cadastrar extends javax.swing.JFrame {
             }
         });
 
+        limparButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         limparButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Limpar.png"))); // NOI18N
         limparButton.setText("LIMPAR");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
@@ -272,7 +320,7 @@ public class tela_Forn_Cadastrar extends javax.swing.JFrame {
             painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(fonecedorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                .addComponent(fonecedorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
                 .addGap(6, 6, 6)
                 .addComponent(fornecedorInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
@@ -323,7 +371,7 @@ public class tela_Forn_Cadastrar extends javax.swing.JFrame {
                     .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(ufInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(cepInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(salvarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(limparButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
