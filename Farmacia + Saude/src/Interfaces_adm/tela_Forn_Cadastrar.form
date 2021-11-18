@@ -55,63 +55,74 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="fonecedorLabel" min="-2" max="-2" attributes="0"/>
                       <Component id="fornecedorInput" min="-2" pref="626" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="nomeFantLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="254" pref="254" max="-2" attributes="0"/>
-                          <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="nomeFantInput" min="-2" pref="285" max="-2" attributes="0"/>
-                          <EmptySpace min="56" pref="56" max="-2" attributes="0"/>
-                          <Component id="emailInput" min="-2" pref="285" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="cnpjLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="307" pref="307" max="-2" attributes="0"/>
-                          <Component id="inscEstLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="celularLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="298" pref="298" max="-2" attributes="0"/>
-                          <Component id="telefoneLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="enderecoLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="284" pref="284" max="-2" attributes="0"/>
-                          <Component id="numeroLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                          <Component id="bairroLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="enderecoInput" min="-2" pref="285" max="-2" attributes="0"/>
-                          <EmptySpace min="56" pref="56" max="-2" attributes="0"/>
-                          <Component id="numeroInput" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                          <Component id="bairroInput" min="-2" pref="207" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="cidadeLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="299" pref="299" max="-2" attributes="0"/>
-                          <Component id="ufLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="61" pref="61" max="-2" attributes="0"/>
-                          <Component id="cepLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="cidadeInput" min="-2" pref="285" max="-2" attributes="0"/>
-                          <EmptySpace min="56" pref="56" max="-2" attributes="0"/>
-                          <Component id="ufInput" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="cepInput" max="32767" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="cnpjInput" max="32767" attributes="0"/>
-                              <Component id="celularInput" pref="285" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="nomeFantInput" alignment="0" min="-2" pref="285" max="-2" attributes="0"/>
+                              <Component id="nomeFantLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cnpjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="56" pref="56" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="telefoneInput" alignment="0" min="-2" pref="285" max="-2" attributes="0"/>
-                              <Component id="inscEstInput" alignment="1" min="-2" pref="285" max="-2" attributes="0"/>
+                              <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="emailInput" min="-2" pref="285" max="-2" attributes="0"/>
+                              <Component id="inscEstLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="cnpjInput" max="32767" attributes="0"/>
+                                  <Component id="celularInput" pref="285" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="celularLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="telefoneLabel" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="telefoneInput" alignment="0" min="-2" pref="285" max="-2" attributes="0"/>
+                                  <Component id="inscEstInput" alignment="1" min="-2" pref="285" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="enderecoInput" alignment="0" min="-2" pref="285" max="-2" attributes="0"/>
+                              <Component id="enderecoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="numeroInput" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="numeroLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="bairroLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="bairroInput" min="-2" pref="207" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cidadeInput" alignment="0" min="-2" pref="285" max="-2" attributes="0"/>
+                              <Component id="cidadeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="ufLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="ufInput" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="cepLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="cepInput" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -134,9 +145,9 @@
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Component id="fornecedorInput" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="nomeFantLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="nomeFantLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="emailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -154,9 +165,9 @@
                       <Component id="cnpjInput" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="celularLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="telefoneLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="celularLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="telefoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -166,8 +177,10 @@
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="enderecoLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="numeroLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="bairroLabel" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="bairroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numeroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -177,29 +190,31 @@
                   </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="cidadeLabel" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="ufLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="cepLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="cidadeLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="ufLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cidadeInput" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="ufInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cepInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="33" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="salvarButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="limparButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="cepLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="cidadeInput" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ufInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cepInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="salvarButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="limparButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
