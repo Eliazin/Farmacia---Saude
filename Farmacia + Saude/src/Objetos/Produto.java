@@ -115,20 +115,20 @@ public class Produto {
     }
 
 
-    public void limpaFornecedor(){
+    public void limpaProduto(){
         
-        descricao = " ";
-        tipo = " ";
-        fornecedor = " ";
+        descricao = "";
+        tipo = "";
+        fornecedor = "";
         qtdeEstoqueMin = 0;
         qtdeEstoque = 0;
-        dataFab = " ";
-        dataVenc = " ";
+        dataFab = "";
+        dataVenc = "";
         precoCusto = 0;
         precoVenda = 0;
         icms = 0;
         lucro = 0;
-        observacao = " ";
+        observacao = "";
         
     }
 }
