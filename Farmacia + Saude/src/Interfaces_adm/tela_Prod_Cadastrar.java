@@ -33,15 +33,16 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         novoProduto.setDescricao(descricaoInput.getText());
         novoProduto.setTipo((String) tipoInput.getSelectedItem());
         novoProduto.setFornecedor(fornecedorInput.getText());
-        novoProduto.setQtdeEstoqueMin(Integer.parseInt(qtdeEstoqueMinInput.getText()));
-        novoProduto.setQtdeEstoque(Integer.parseInt(qtdeEstoqueInput.getText()));
+        
+        novoProduto.setQtdeEstoqueMin(converter(qtdeEstoqueMinInput.getText()));
+        novoProduto.setQtdeEstoque(converter(qtdeEstoqueInput.getText()));
         novoProduto.setDataFab(dataFabInput.getText());
         novoProduto.setDataVenc(dataVencInput.getText());
-        novoProduto.setPrecoCusto(Integer.parseInt(precoCustoInput.getText()));
-        novoProduto.setPrecoVenda(Integer.parseInt(precoVendaInput.getText()));
-        novoProduto.setIcms(Integer.parseInt(icmsInput.getText()));
-        novoProduto.setLucro(Integer.parseInt(lucroInput.getText()));
-        novoProduto.setObservacao((String) observacaoInput.getToolTipText());
+        novoProduto.setPrecoCusto(converter(precoCustoInput.getText()));
+        novoProduto.setPrecoVenda(converter(precoVendaInput.getText()));
+        novoProduto.setIcms(converter(icmsInput.getText()));
+        novoProduto.setLucro(converter(lucroInput.getText()));
+        novoProduto.setObservacao(observacaoInput.getText());
         
         try {
                         
@@ -56,7 +57,6 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
                     + "preco_custo,"
                     + "preco_venda,"
                     + "icms,"
-                    + "lucro,"
                     + "observacao"
                 + ") VALUES ("
                     + "'" + novoProduto.getDescricao()+ "',"
@@ -69,7 +69,6 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
                     + novoProduto.getPrecoCusto()+ ","
                     + novoProduto.getPrecoVenda()+ ","
                     + novoProduto.getIcms()+ ","
-                    + novoProduto.getLucro() + ","
                     + "'" + novoProduto.getObservacao()+ "'"
                 + ");");
             
@@ -81,11 +80,20 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         } finally{            
             this.conectar.fechaBanco();
             JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso");
-            novoProduto.limpaFornecedor();
+            novoProduto.limpaProduto();
             limparCamposCadastro();
         }                
     }
     
+    
+    
+    private int converter(String valor){
+        if(!valor.equals("")){
+            return Integer.parseInt(valor);
+        }
+        
+        return 0;
+    }
     private void limparCamposCadastro(){
         descricaoInput.setText("");
         fornecedorInput.setText("");
@@ -97,6 +105,7 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         precoVendaInput.setText("");
         icmsInput.setText("");
         lucroInput.setText("");
+        observacaoInput.setText("");
     }
 
     @SuppressWarnings("unchecked")
@@ -131,10 +140,10 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         lucroInput = new javax.swing.JTextField();
         rsLucroLabel = new javax.swing.JLabel();
         observacaoLabel = new javax.swing.JLabel();
-        observacaoInput = new javax.swing.JScrollPane();
-        txtEndereco = new javax.swing.JTextArea();
         salvarButton = new javax.swing.JButton();
         limparButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        observacaoInput = new javax.swing.JTextArea();
 
         setTitle("CADASTRO DE PRODUTOS");
         setResizable(false);
@@ -219,6 +228,9 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         lucroLabel.setForeground(new java.awt.Color(0, 0, 0));
         lucroLabel.setText("Lucro:");
 
+        lucroInput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        lucroInput.setEnabled(false);
+
         rsLucroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         rsLucroLabel.setForeground(new java.awt.Color(0, 0, 0));
         rsLucroLabel.setText("R$: ");
@@ -226,10 +238,6 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         observacaoLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         observacaoLabel.setForeground(new java.awt.Color(0, 0, 0));
         observacaoLabel.setText("Observações:");
-
-        txtEndereco.setColumns(20);
-        txtEndereco.setRows(5);
-        observacaoInput.setViewportView(txtEndereco);
 
         salvarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         salvarButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Salvar.png"))); // NOI18N
@@ -248,6 +256,10 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
                 limparButtonActionPerformed(evt);
             }
         });
+
+        observacaoInput.setColumns(20);
+        observacaoInput.setRows(5);
+        jScrollPane1.setViewportView(observacaoInput);
 
         javax.swing.GroupLayout painelPrincipalLayout = new javax.swing.GroupLayout(painelPrincipal);
         painelPrincipal.setLayout(painelPrincipalLayout);
@@ -331,7 +343,7 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
                 .addGap(79, 79, 79))
             .addGroup(painelPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(observacaoInput)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
         painelPrincipalLayout.setVerticalGroup(
@@ -379,9 +391,9 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
                     .addComponent(lucroInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addComponent(observacaoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(observacaoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(salvarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(limparButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -464,10 +476,11 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
     private javax.swing.JLabel fornecedorLabel;
     private javax.swing.JTextField icmsInput;
     private javax.swing.JLabel icmsLabel;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton limparButton;
     private javax.swing.JTextField lucroInput;
     private javax.swing.JLabel lucroLabel;
-    private javax.swing.JScrollPane observacaoInput;
+    private javax.swing.JTextArea observacaoInput;
     private javax.swing.JLabel observacaoLabel;
     private javax.swing.JPanel painelPrincipal;
     private javax.swing.JTextField precoCustoInput;
@@ -485,6 +498,5 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
     private javax.swing.JButton salvarButton;
     private javax.swing.JComboBox<String> tipoInput;
     private javax.swing.JLabel tipoLabel;
-    private javax.swing.JTextArea txtEndereco;
     // End of variables declaration//GEN-END:variables
 }
