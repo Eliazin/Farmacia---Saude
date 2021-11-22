@@ -18,6 +18,8 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         boolean campoVazio = true;
         
         if (this.descricaoInput.getText().equals("") || 
+            this.dataFabInput.getText().equals("    -  -  ") || 
+            this.dataVencInput.getText().equals("    -  -  ") ||
             this.precoVendaInput.getText().equals("") ||
             this.precoCustoInput.getText().equals("") ||
             this.icmsInput.getText().equals("")) {
@@ -33,15 +35,14 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         novoProduto.setDescricao(descricaoInput.getText());
         novoProduto.setTipo((String) tipoInput.getSelectedItem());
         novoProduto.setFornecedor(fornecedorInput.getText());
-        
-        novoProduto.setQtdeEstoqueMin(converter(qtdeEstoqueMinInput.getText()));
-        novoProduto.setQtdeEstoque(converter(qtdeEstoqueInput.getText()));
+        novoProduto.setQtdeEstoqueMin(converterInt(qtdeEstoqueMinInput.getText()));
+        novoProduto.setQtdeEstoque(converterInt(qtdeEstoqueInput.getText()));
         novoProduto.setDataFab(dataFabInput.getText());
         novoProduto.setDataVenc(dataVencInput.getText());
-        novoProduto.setPrecoCusto(converter(precoCustoInput.getText()));
-        novoProduto.setPrecoVenda(converter(precoVendaInput.getText()));
-        novoProduto.setIcms(converter(icmsInput.getText()));
-        novoProduto.setLucro(converter(lucroInput.getText()));
+        novoProduto.setPrecoCusto(converterFloat(precoCustoInput.getText()));
+        novoProduto.setPrecoVenda(converterFloat(precoVendaInput.getText()));
+        novoProduto.setIcms(converterFloat(icmsInput.getText()));
+        novoProduto.setLucro(converterFloat(lucroInput.getText()));
         novoProduto.setObservacao(observacaoInput.getText());
         
         try {
@@ -85,15 +86,22 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         }                
     }
     
-    
-    
-    private int converter(String valor){
+    private int converterInt(String valor){
         if(!valor.equals("")){
             return Integer.parseInt(valor);
         }
         
         return 0;
     }
+    
+    private float converterFloat(String valor){
+        if(!valor.equals("")){
+            return Float.parseFloat(valor);
+        }
+        
+        return 0;
+    }
+    
     private void limparCamposCadastro(){
         descricaoInput.setText("");
         fornecedorInput.setText("");
@@ -350,7 +358,7 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
             painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(descricaoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                .addComponent(descricaoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                 .addGap(6, 6, 6)
                 .addComponent(descricaoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
@@ -393,7 +401,7 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
                 .addComponent(observacaoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(salvarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(limparButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -420,8 +428,9 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         if (checkCampoVazio()) {
             cadastraProduto(novoProduto);
         } else {
-            JOptionPane.showMessageDialog(null, " Os campos:\n Descrição\n Preço. Venda"
-                    + "\n Preço. Custo\n ICMS\n São obrigatorios!");
+            JOptionPane.showMessageDialog(null, " Os campos:\n Descrição"
+                                        + "\n Data. Fabricação\n Data. Vencimento\n Preço. Venda"
+                                           + "\n Preço. Custo\n ICMS\n São obrigatorios!");
         }
     }//GEN-LAST:event_salvarButtonActionPerformed
 

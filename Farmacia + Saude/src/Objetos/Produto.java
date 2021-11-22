@@ -12,10 +12,10 @@ public class Produto {
     private int qtdeEstoque;
     private String dataFab;
     private String dataVenc;
-    private int precoCusto;
-    private int precoVenda;
-    private int icms;
-    private int lucro;
+    private float precoCusto;
+    private float precoVenda;
+    private float icms;
+    private float lucro;
     private String observacao;
 
     public String getDescricao() {
@@ -74,35 +74,35 @@ public class Produto {
         this.dataVenc = dataVenc;
     }
 
-    public int getPrecoCusto() {
+    public float getPrecoCusto() {
         return precoCusto;
     }
 
-    public void setPrecoCusto(int precoCusto) {
+    public void setPrecoCusto(float precoCusto) {
         this.precoCusto = precoCusto;
     }
 
-    public int getPrecoVenda() {
+    public float getPrecoVenda() {
         return precoVenda;
     }
 
-    public void setPrecoVenda(int precoVenda) {
+    public void setPrecoVenda(float precoVenda) {
         this.precoVenda = precoVenda;
     }
 
-    public int getIcms() {
+    public float getIcms() {
         return icms;
     }
 
-    public void setIcms(int icms) {
+    public void setIcms(float icms) {
         this.icms = icms;
     }
 
-    public int getLucro() {
+    public float getLucro() {
         return lucro;
     }
 
-    public void setLucro(int lucro) {
+    public void setLucro(float lucro) {
         this.lucro = lucro;
     }
 

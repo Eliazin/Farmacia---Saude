@@ -13,6 +13,8 @@ public class tela_Menu extends javax.swing.JFrame {
     tela_Forn_Consultar telaFornConsultar   = new tela_Forn_Consultar();
     tela_Forn_Atualizar telaFornAtualizar   = new tela_Forn_Atualizar();
     tela_Forn_Deletar   telaFornDeletar     = new tela_Forn_Deletar();
+    tela_Prod_Cadastrar telaProdCadastrar   = new tela_Prod_Cadastrar();
+    tela_Prod_Consultar telaProdConsultar   = new tela_Prod_Consultar();
     
     public tela_Menu() {
         initComponents();
@@ -104,7 +106,7 @@ public class tela_Menu extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(painelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(atualizarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(consultarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(consultarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
                             .addComponent(cadastrarCliButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)))
                     .addGroup(painelClientesLayout.createSequentialGroup()
                         .addContainerGap()
@@ -179,7 +181,7 @@ public class tela_Menu extends javax.swing.JFrame {
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(fornecedoresLabel)
-                        .addGap(0, 30, Short.MAX_VALUE))
+                        .addGap(0, 29, Short.MAX_VALUE))
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(cadastrarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -213,9 +215,19 @@ public class tela_Menu extends javax.swing.JFrame {
 
         cadastrarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         cadastrarProdButton.setText("Cadastrar");
+        cadastrarProdButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarProdButtonActionPerformed(evt);
+            }
+        });
 
         consultarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         consultarProdButton.setText("Consultar");
+        consultarProdButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultarProdButtonActionPerformed(evt);
+            }
+        });
 
         atualizarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         atualizarProdButton.setText("Atualizar");
@@ -336,6 +348,14 @@ public class tela_Menu extends javax.swing.JFrame {
     private void deletarFornButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletarFornButton2ActionPerformed
         telaFornDeletar.setVisible(true);
     }//GEN-LAST:event_deletarFornButton2ActionPerformed
+
+    private void cadastrarProdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarProdButtonActionPerformed
+        telaProdCadastrar.setVisible(true);
+    }//GEN-LAST:event_cadastrarProdButtonActionPerformed
+
+    private void consultarProdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarProdButtonActionPerformed
+        telaProdConsultar.setVisible(true);
+    }//GEN-LAST:event_consultarProdButtonActionPerformed
 
     /**
      * @param args the command line arguments
