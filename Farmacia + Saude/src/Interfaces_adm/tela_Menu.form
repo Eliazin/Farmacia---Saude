@@ -103,7 +103,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="atualizarCliButton1" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="consultarCliButton1" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="consultarCliButton1" alignment="1" pref="133" max="32767" attributes="0"/>
                                   <Component id="cadastrarCliButton1" pref="134" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -219,7 +219,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Component id="fornecedoresLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="29" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -378,6 +378,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cadastrar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrarProdButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="consultarProdButton">
               <Properties>
@@ -386,6 +389,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Consultar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultarProdButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="atualizarProdButton">
               <Properties>

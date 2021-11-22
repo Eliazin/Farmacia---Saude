@@ -14,7 +14,7 @@ public class tela_Forn_Consultar extends javax.swing.JFrame {
         initComponents();
     }
     
-    private void consultarFornecedor(Fornecedor cliente){
+    private void consultarFornecedor(Fornecedor fornecedor){
         this.conectar.conectaBanco();
         
         String consultaCnpj = this.cnpjInput.getText();
@@ -57,26 +57,26 @@ public class tela_Forn_Consultar extends javax.swing.JFrame {
            }
             
            if(fornecedor.getNomeForn().equals("")){
-                JOptionPane.showMessageDialog(null, "Fornecedor não encontrado!");
+                JOptionPane.showMessageDialog(null, "Fornecedor não encontrado!"); 
            }
            
         } catch (Exception e) {            
-            System.out.println("Erro ao consultar fornecedor " +  e.getMessage());
+            System.out.println("Erro ao consultar fornecedor " +  e.getMessage());  
             JOptionPane.showMessageDialog(null, "Erro ao buscar fornecedor");
             
         }finally{
             fornecedorOutput.setText(fornecedor.getNomeForn());
             nomeFantOutput.setText(fornecedor.getNomeForn());
-            emailOutput.setText(cliente.getEmail());
+            emailOutput.setText(fornecedor.getEmail());
             inscEstadualOutput.setText(fornecedor.getInscEst());
-            celularOutput.setText(cliente.getCelular());
+            celularOutput.setText(fornecedor.getCelular());
             telefoneOutput.setText(fornecedor.getTelefone());
             enderecoOutput.setText(fornecedor.getEndereco());
-            numeroOutput.setText(cliente.getNumero());
-            bairroOutput.setText(cliente.getBairro());
-            cidadeOutput.setText(cliente.getCidade());
-            ufOutput.setText(cliente.getUf());
-            cepOutput.setText(cliente.getCep());
+            numeroOutput.setText(fornecedor.getNumero());
+            bairroOutput.setText(fornecedor.getBairro());
+            cidadeOutput.setText(fornecedor.getCidade());
+            ufOutput.setText(fornecedor.getUf());
+            cepOutput.setText(fornecedor.getCep());
             this.conectar.fechaBanco();   
             fornecedor.limpaFornecedor();
         }               
