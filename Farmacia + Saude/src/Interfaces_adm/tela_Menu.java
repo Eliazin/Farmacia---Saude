@@ -15,6 +15,7 @@ public class tela_Menu extends javax.swing.JFrame {
     tela_Forn_Deletar   telaFornDeletar     = new tela_Forn_Deletar();
     tela_Prod_Cadastrar telaProdCadastrar   = new tela_Prod_Cadastrar();
     tela_Prod_Consultar telaProdConsultar   = new tela_Prod_Consultar();
+    tela_Prod_Atualizar telaProdAtualizar   = new tela_Prod_Atualizar();
     
     public tela_Menu() {
         initComponents();
@@ -231,6 +232,11 @@ public class tela_Menu extends javax.swing.JFrame {
 
         atualizarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         atualizarProdButton.setText("Atualizar");
+        atualizarProdButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atualizarProdButtonActionPerformed(evt);
+            }
+        });
 
         deletarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         deletarProdButton.setText("Deletar");
@@ -356,6 +362,10 @@ public class tela_Menu extends javax.swing.JFrame {
     private void consultarProdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarProdButtonActionPerformed
         telaProdConsultar.setVisible(true);
     }//GEN-LAST:event_consultarProdButtonActionPerformed
+
+    private void atualizarProdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atualizarProdButtonActionPerformed
+        telaProdAtualizar.setVisible(true);
+    }//GEN-LAST:event_atualizarProdButtonActionPerformed
 
     /**
      * @param args the command line arguments

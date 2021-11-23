@@ -11,7 +11,7 @@
     </Container>
   </NonVisualComponents>
   <Properties>
-    <Property name="title" type="java.lang.String" value="CONSULTA DE PRODUTOS"/>
+    <Property name="title" type="java.lang.String" value="ATUALIZA&#xc7;&#xc3;O DE PRODUTOS"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -63,7 +63,7 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="painelOutput" max="32767" attributes="0"/>
+                          <Component id="painelInput" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
@@ -73,7 +73,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                          <Component id="consultarButton" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="atualizarButton" min="-2" pref="130" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="limparButton" min="-2" pref="130" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
@@ -92,10 +92,10 @@
                       <Component id="descricaoInput" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="painelOutput" min="-2" max="-2" attributes="0"/>
+                  <Component id="painelInput" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="consultarButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="atualizarButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="limparButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -122,15 +122,15 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="consultarButton">
+        <Component class="javax.swing.JButton" name="atualizarButton">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Leelawadee UI" size="11" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="CONSULTAR"/>
+            <Property name="text" type="java.lang.String" value="ATUALIZAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultarButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="atualizarButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="limparButton">
@@ -147,7 +147,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limparButtonActionPerformed"/>
           </Events>
         </Component>
-        <Container class="javax.swing.JPanel" name="painelOutput">
+        <Container class="javax.swing.JPanel" name="painelInput">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -167,41 +167,43 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jScrollPane1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="rsVendaLabel" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="rsVendaLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="qtdeEstoqueLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="dataVencLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="dataVencOutput" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="dataVencInput" min="-2" pref="125" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="tipoLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="250" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="tipoOutPut" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="precoCustoOutput" min="-2" pref="99" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="qtdeEstoqueOutput" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
-                                              <Component id="qtdeEstoqueLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="precoVendaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="precoVendaInput" min="-2" pref="99" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="precoVendaLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
+                                          <Component id="qtdeEstoqueInput" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <Component id="rsCustoLabel" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                              <Component id="precoVendaOutput" max="32767" attributes="0"/>
+                                              <Component id="precoCustoInput" min="-2" pref="100" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="precoCustoLabel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="qtdeEstoqueMinLabel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="qtdeEstoqueMinOutput" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <Component id="qtdeEstoqueMinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="qtdeEstoqueMinInput" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Component id="tipoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tipoInput" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace pref="43" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -211,7 +213,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="rsIcmsLabel" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="icmsOutput" min="-2" pref="93" max="-2" attributes="0"/>
+                                              <Component id="icmsInput" min="-2" pref="93" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
@@ -227,8 +229,8 @@
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="dataFabLabel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="dataFabOutput" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
-                                          <Component id="fornecedorOutput" alignment="0" min="-2" pref="275" max="-2" attributes="0"/>
+                                          <Component id="dataFabInput" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <Component id="fornecedorInput" alignment="0" min="-2" pref="275" max="-2" attributes="0"/>
                                           <Component id="fornecedorLabel" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -254,22 +256,22 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="fornecedorOutput" alignment="3" max="32767" attributes="0"/>
-                          <Component id="tipoOutPut" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fornecedorInput" alignment="3" max="32767" attributes="0"/>
+                          <Component id="tipoInput" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="qtdeEstoqueMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="qtdeEstoqueLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="dataFabLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="dataVencLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="qtdeEstoqueMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="qtdeEstoqueMinOutput" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="qtdeEstoqueOutput" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="dataFabOutput" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="dataVencOutput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dataFabInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dataVencInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="qtdeEstoqueMinInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="qtdeEstoqueInput" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -281,13 +283,13 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="rsCustoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="precoCustoOutput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="precoVendaInput" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="rsVendaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="rsIcmsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="icmsOutput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="icmsInput" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="rsLucroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lucroOutput" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="precoVendaOutput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="precoCustoInput" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="observacaoLabel" min="-2" max="-2" attributes="0"/>
@@ -310,13 +312,22 @@
                 <Property name="text" type="java.lang.String" value="Tipo:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="tipoOutPut">
+            <Component class="javax.swing.JComboBox" name="tipoInput">
               <Properties>
-                <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Antibioticos"/>
+                    <StringItem index="1" value="Cosmeticos"/>
+                    <StringItem index="2" value="Fraldas"/>
+                  </StringArray>
+                </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="fornecedorLabel">
               <Properties>
@@ -329,7 +340,7 @@
                 <Property name="text" type="java.lang.String" value="Fornecedor:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="fornecedorOutput">
+            <Component class="javax.swing.JTextField" name="fornecedorInput">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Leelawadee UI" size="11" style="0"/>
@@ -337,26 +348,6 @@
                 <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="qtdeEstoqueMinLabel">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Leelawadee UI" size="11" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Qtde. Estoque Min"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="qtdeEstoqueMinOutput">
-              <Properties>
-                <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="qtdeEstoqueLabel">
@@ -370,12 +361,29 @@
                 <Property name="text" type="java.lang.String" value="Qtde. Estoque"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="qtdeEstoqueOutput">
+            <Component class="javax.swing.JTextField" name="qtdeEstoqueInput">
               <Properties>
                 <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="qtdeEstoqueMinLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Qtde. Estoque Min"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="qtdeEstoqueMinInput">
+              <Properties>
+                <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="dataFabLabel">
@@ -389,7 +397,7 @@
                 <Property name="text" type="java.lang.String" value="Data. Fabrica&#xe7;&#xe3;o:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="dataFabOutput">
+            <Component class="javax.swing.JFormattedTextField" name="dataFabInput">
               <Properties>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                   <Format format="####-##-##" subtype="-1" type="5"/>
@@ -397,7 +405,6 @@
                 <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="dataVencLabel">
@@ -411,7 +418,7 @@
                 <Property name="text" type="java.lang.String" value="Data. Vencimento:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="dataVencOutput">
+            <Component class="javax.swing.JFormattedTextField" name="dataVencInput">
               <Properties>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                   <Format format="####-##-##" subtype="-1" type="5"/>
@@ -419,26 +426,6 @@
                 <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="precoCustoLabel">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Leelawadee UI" size="11" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pre&#xe7;o Custo:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="precoCustoOutput">
-              <Properties>
-                <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="precoVendaLabel">
@@ -452,12 +439,29 @@
                 <Property name="text" type="java.lang.String" value="Pre&#xe7;o Venda:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="precoVendaOutput">
+            <Component class="javax.swing.JTextField" name="precoVendaInput">
               <Properties>
                 <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="precoCustoLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pre&#xe7;o Custo:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="precoCustoInput">
+              <Properties>
+                <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="icmsLabel">
@@ -471,7 +475,7 @@
                 <Property name="text" type="java.lang.String" value="ICMS:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="icmsOutput">
+            <Component class="javax.swing.JTextField" name="icmsInput">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Leelawadee UI" size="11" style="0"/>
@@ -479,7 +483,6 @@
                 <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lucroLabel">
@@ -501,7 +504,7 @@
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="rsCustoLabel">
+            <Component class="javax.swing.JLabel" name="rsVendaLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Leelawadee UI" size="11" style="0"/>
@@ -512,7 +515,7 @@
                 <Property name="text" type="java.lang.String" value="R$: "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="rsVendaLabel">
+            <Component class="javax.swing.JLabel" name="rsCustoLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Leelawadee UI" size="11" style="0"/>
@@ -563,14 +566,13 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="observacaoOutput">
+                <Component class="javax.swing.JTextArea" name="observacaoInput">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
                     <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
               </SubComponents>
