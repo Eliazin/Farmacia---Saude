@@ -40,6 +40,17 @@ public class tela_Cli_Atualizar extends javax.swing.JFrame {
         }
     }
     
+    public boolean checkCampoVazio () {
+        boolean campoVazio = true;
+        
+        if (this.nomeUserInput.getText().equals("") || 
+            this.nomeInput.getText().equals("")) {
+            campoVazio = false;
+        }
+        
+        return campoVazio;
+    }
+    
     private void limparCampos(){
         cpfInput.setText("");
         nomeUserInput.setText("");
@@ -304,7 +315,11 @@ public class tela_Cli_Atualizar extends javax.swing.JFrame {
     }//GEN-LAST:event_limparButtonActionPerformed
 
     private void atualizarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atualizarButtonActionPerformed
-        atualizarCliente(cliente);
+        if (checkCampoVazio()) {
+            atualizarCliente(cliente);
+        } else {
+            JOptionPane.showMessageDialog(null, "Os campos: Nome de Usuario\nNome\nSão obrigatorios!");
+        }
     }//GEN-LAST:event_atualizarButtonActionPerformed
 
     public static void main(String args[]) {

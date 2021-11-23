@@ -45,6 +45,16 @@ public class tela_Forn_Atualizar extends javax.swing.JFrame {
         }
     }
     
+    public boolean checkCampoVazio () {
+        boolean campoVazio = true;
+        
+        if (this.fornecedorInput.getText().equals("")) {
+            campoVazio = false;
+        }
+        
+        return campoVazio;
+    }
+    
     private void limparCampos(){
         fornecedorInput.setText("");
         nomeFantInput.setText("");
@@ -382,7 +392,11 @@ public class tela_Forn_Atualizar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void atualizarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atualizarButtonActionPerformed
-        atualizarFornecedor(fornecedor);
+        if (checkCampoVazio()) {
+            atualizarFornecedor(fornecedor);
+        } else {
+            JOptionPane.showMessageDialog(null, "O campo: Fornecedor\nÉ obrigatorio!");
+        }
     }//GEN-LAST:event_atualizarButtonActionPerformed
 
     private void limparButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparButtonActionPerformed
