@@ -5,13 +5,36 @@ import Banco_de_dados.mySql;
 import Objetos.Produto;
 import javax.swing.JOptionPane;
 
-public class tela_Prod_Consultar extends javax.swing.JFrame {
+public class tela_Prod_Deletar extends javax.swing.JFrame {
 
     mySql conectar = new mySql();
     Produto produto = new Produto();
     
-    public tela_Prod_Consultar() {
+    public tela_Prod_Deletar() {
         initComponents();
+    }
+    
+    private void deletarProduto(Produto produto){
+        this.conectar.conectaBanco();
+        
+        String consultaDescricao = this.descricaoInput.getText(); 
+        
+        try {            
+            this.conectar.updateSQL(
+                "DELETE FROM produtos "
+                + " WHERE "
+                    + "descricao = '" + consultaDescricao + "'"
+                + ";"            
+            );
+            
+        } catch (Exception e) {
+            System.out.println("Erro ao deletar produto " +  e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro ao deletar produto");
+        }finally{
+            this.conectar.fechaBanco();
+            limparCampos();
+            JOptionPane.showMessageDialog(null, "Produto deletado com sucesso");            
+        }     
     }
     
     private void consultarProduto(Produto produto){
@@ -59,7 +82,7 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
            }
            
         } catch (Exception e) {            
-            System.out.println("Erro ao consultar produto " +  e.getMessage()); /*ERRO*/
+            System.out.println("Erro ao buscar produto " +  e.getMessage()); /*ERRO*/
             JOptionPane.showMessageDialog(null, "Erro ao buscar produto");
             
         }finally{
@@ -102,7 +125,7 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
         painelPrincipal = new javax.swing.JPanel();
         descricaoLabel = new javax.swing.JLabel();
         descricaoInput = new javax.swing.JTextField();
-        consultarButton = new javax.swing.JButton();
+        deletarButton = new javax.swing.JButton();
         limparButton = new javax.swing.JButton();
         painelOutput = new javax.swing.JPanel();
         tipoLabel = new javax.swing.JLabel();
@@ -132,10 +155,11 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
         observacaoLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         observacaoOutput = new javax.swing.JTextArea();
+        procurarButton = new javax.swing.JButton();
 
         jToolBar1.setRollover(true);
 
-        setTitle("CONSULTA DE PRODUTOS");
+        setTitle("DELETAR PRODUTOS");
         setResizable(false);
 
         painelPrincipal.setBackground(new java.awt.Color(255, 255, 255));
@@ -147,11 +171,11 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
 
         descricaoInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
 
-        consultarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
-        consultarButton.setText("CONSULTAR");
-        consultarButton.addActionListener(new java.awt.event.ActionListener() {
+        deletarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        deletarButton.setText("DELETAR");
+        deletarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                consultarButtonActionPerformed(evt);
+                deletarButtonActionPerformed(evt);
             }
         });
 
@@ -385,6 +409,14 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        procurarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        procurarButton.setText("Procurar");
+        procurarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                procurarButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelPrincipalLayout = new javax.swing.GroupLayout(painelPrincipal);
         painelPrincipal.setLayout(painelPrincipalLayout);
         painelPrincipalLayout.setHorizontalGroup(
@@ -398,10 +430,13 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
                         .addGap(12, 12, 12)
                         .addComponent(descricaoLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(descricaoInput))
+                        .addComponent(descricaoInput, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(procurarButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelPrincipalLayout.createSequentialGroup()
                         .addGap(81, 81, 81)
-                        .addComponent(consultarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(deletarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(limparButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(74, 74, 74)))
@@ -416,13 +451,15 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
                         .addComponent(descricaoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
                     .addGroup(painelPrincipalLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(descricaoInput, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(descricaoInput, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(procurarButton))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(painelOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(consultarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deletarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(limparButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28))
         );
@@ -442,13 +479,17 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void consultarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarButtonActionPerformed
-        consultarProduto(produto);
-    }//GEN-LAST:event_consultarButtonActionPerformed
+    private void deletarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletarButtonActionPerformed
+        deletarProduto(produto);
+    }//GEN-LAST:event_deletarButtonActionPerformed
 
     private void limparButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparButtonActionPerformed
         limparCampos();
     }//GEN-LAST:event_limparButtonActionPerformed
+
+    private void procurarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_procurarButtonActionPerformed
+        consultarProduto(produto);
+    }//GEN-LAST:event_procurarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -467,14 +508,18 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tela_Prod_Consultar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tela_Prod_Deletar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tela_Prod_Consultar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tela_Prod_Deletar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tela_Prod_Consultar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tela_Prod_Deletar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tela_Prod_Consultar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tela_Prod_Deletar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -483,17 +528,17 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tela_Prod_Consultar().setVisible(true);
+                new tela_Prod_Deletar().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton consultarButton;
     private javax.swing.JLabel dataFabLabel;
     private javax.swing.JFormattedTextField dataFabOutput;
     private javax.swing.JLabel dataVencLabel;
     private javax.swing.JFormattedTextField dataVencOutput;
+    private javax.swing.JButton deletarButton;
     private javax.swing.JTextField descricaoInput;
     private javax.swing.JLabel descricaoLabel;
     private javax.swing.JLabel fornecedorLabel;
@@ -513,6 +558,7 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
     private javax.swing.JTextField precoCustoOutput;
     private javax.swing.JLabel precoVendaLabel;
     private javax.swing.JTextField precoVendaOutput;
+    private javax.swing.JButton procurarButton;
     private javax.swing.JLabel qtdeEstoqueLabel;
     private javax.swing.JLabel qtdeEstoqueMinLabel;
     private javax.swing.JTextField qtdeEstoqueMinOutput;
