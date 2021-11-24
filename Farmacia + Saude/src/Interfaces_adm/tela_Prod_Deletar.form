@@ -11,7 +11,7 @@
     </Container>
   </NonVisualComponents>
   <Properties>
-    <Property name="title" type="java.lang.String" value="CONSULTA DE PRODUTOS"/>
+    <Property name="title" type="java.lang.String" value="DELETAR PRODUTOS"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -69,11 +69,14 @@
                           <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                           <Component id="descricaoLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="descricaoInput" max="32767" attributes="0"/>
+                          <Component id="descricaoInput" min="-2" pref="465" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="procurarButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                          <Component id="consultarButton" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="deletarButton" min="-2" pref="130" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="limparButton" min="-2" pref="130" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
@@ -93,7 +96,10 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="descricaoInput" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="descricaoInput" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="procurarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -101,7 +107,7 @@
                   <Component id="painelOutput" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="consultarButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="deletarButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="limparButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -128,15 +134,15 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="consultarButton">
+        <Component class="javax.swing.JButton" name="deletarButton">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Leelawadee UI" size="11" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="CONSULTAR"/>
+            <Property name="text" type="java.lang.String" value="DELETAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultarButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deletarButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="limparButton">
@@ -583,6 +589,17 @@
             </Container>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JButton" name="procurarButton">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Leelawadee UI" size="11" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Procurar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="procurarButtonActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
