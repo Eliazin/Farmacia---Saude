@@ -60,7 +60,7 @@ public class tela_Prod_Consultar extends javax.swing.JFrame {
            
         } catch (Exception e) {            
             System.out.println("Erro ao consultar produto " +  e.getMessage()); /*ERRO*/
-            JOptionPane.showMessageDialog(null, "Erro ao buscar produto");
+            /*JOptionPane.showMessageDialog(null, "Erro ao buscar produto");*/
             
         }finally{
             tipoOutPut.setText(produto.getTipo());
