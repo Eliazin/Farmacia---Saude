@@ -100,10 +100,6 @@ public class tela_Menu extends javax.swing.JFrame {
             .addGroup(painelClientesLayout.createSequentialGroup()
                 .addGroup(painelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelClientesLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(clientesLabel)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(painelClientesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(painelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(atualizarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -113,6 +109,10 @@ public class tela_Menu extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(deletarCliButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelClientesLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(clientesLabel)
+                .addGap(55, 55, 55))
         );
         painelClientesLayout.setVerticalGroup(
             painelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,19 +180,19 @@ public class tela_Menu extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(atualizarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(fornecedoresLabel)
-                        .addGap(0, 29, Short.MAX_VALUE))
-                    .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(cadastrarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(consultarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(consultarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))
                     .addGroup(painelFornecedoresLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(deletarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelFornecedoresLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(fornecedoresLabel)
+                .addGap(36, 36, 36))
         );
         painelFornecedoresLayout.setVerticalGroup(
             painelFornecedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -243,6 +243,11 @@ public class tela_Menu extends javax.swing.JFrame {
 
         catalogoProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         catalogoProdButton.setText("Catalogo");
+        catalogoProdButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                catalogoProdButtonActionPerformed(evt);
+            }
+        });
 
         produtosLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         produtosLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -258,13 +263,13 @@ public class tela_Menu extends javax.swing.JFrame {
                     .addComponent(catalogoProdButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(deletarProdButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(atualizarProdButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(consultarProdButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(consultarProdButton, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(cadastrarProdButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(painelProdutosLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelProdutosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(produtosLabel)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGap(50, 50, 50))
         );
         painelProdutosLayout.setVerticalGroup(
             painelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -366,6 +371,10 @@ public class tela_Menu extends javax.swing.JFrame {
     private void atualizarProdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atualizarProdButtonActionPerformed
         telaProdAtualizar.setVisible(true);
     }//GEN-LAST:event_atualizarProdButtonActionPerformed
+
+    private void catalogoProdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catalogoProdButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catalogoProdButtonActionPerformed
 
     /**
      * @param args the command line arguments
