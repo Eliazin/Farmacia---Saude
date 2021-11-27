@@ -9,6 +9,8 @@ public class cadastro_Clientes extends javax.swing.JFrame {
     
     mySql conectar = new mySql();
     Cliente novoCliente = new Cliente();
+    
+    boolean erro;
         
     public cadastro_Clientes() {
         initComponents();
@@ -75,10 +77,14 @@ public class cadastro_Clientes extends javax.swing.JFrame {
             
             System.out.println("Erro ao cadastrar cliente " +  e.getMessage());
             JOptionPane.showMessageDialog(null, "Erro ao cadastrar cliente");
+            erro = true;
             
         } finally{            
             this.conectar.fechaBanco();
-            JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso");
+            
+            if (!erro) {
+                JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso");
+            }
             novoCliente.limpaCliente();
             //limparCamposCadastro();
         }                
@@ -138,6 +144,8 @@ public class cadastro_Clientes extends javax.swing.JFrame {
         nomeLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeLabel.setText("Nome:");
 
+        nomeInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
         cpfLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         cpfLabel.setForeground(new java.awt.Color(0, 0, 0));
         cpfLabel.setText("CPF:");
@@ -152,10 +160,13 @@ public class cadastro_Clientes extends javax.swing.JFrame {
         emailLabel.setForeground(new java.awt.Color(0, 0, 0));
         emailLabel.setText("E-mail:");
 
+        emailInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
         ruaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         ruaLabel.setForeground(new java.awt.Color(0, 0, 0));
         ruaLabel.setText("Rua:");
 
+        ruaInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         ruaInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ruaInputActionPerformed(evt);
@@ -165,6 +176,8 @@ public class cadastro_Clientes extends javax.swing.JFrame {
         numeroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         numeroLabel.setForeground(new java.awt.Color(0, 0, 0));
         numeroLabel.setText("Numero:");
+
+        numeroInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
 
         celularLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         celularLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -190,6 +203,8 @@ public class cadastro_Clientes extends javax.swing.JFrame {
         senhaLabel.setForeground(new java.awt.Color(0, 0, 0));
         senhaLabel.setText("Senha:");
 
+        senhaInput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+
         nomeUserLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         nomeUserLabel.setForeground(new java.awt.Color(0, 0, 0));
         nomeUserLabel.setText("Nome de Usuario:");
@@ -206,6 +221,7 @@ public class cadastro_Clientes extends javax.swing.JFrame {
 
         icone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Farmacia_Logo.png"))); // NOI18N
 
+        limparButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         limparButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Limpar.png"))); // NOI18N
         limparButton.setText("LIMPAR");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
@@ -214,6 +230,7 @@ public class cadastro_Clientes extends javax.swing.JFrame {
             }
         });
 
+        salvarButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         salvarButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Salvar.png"))); // NOI18N
         salvarButton.setText("SALVAR");
         salvarButton.addActionListener(new java.awt.event.ActionListener() {
