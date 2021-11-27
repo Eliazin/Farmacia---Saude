@@ -161,6 +161,7 @@ public class tela_Prod_Atualizar extends javax.swing.JFrame {
         tipoLabel.setText("Tipo:");
 
         tipoInput.setBackground(new java.awt.Color(255, 255, 255));
+        tipoInput.setForeground(new java.awt.Color(0, 0, 0));
         tipoInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Antibioticos", "Cosmeticos", "Fraldas" }));
 
         fornecedorLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N

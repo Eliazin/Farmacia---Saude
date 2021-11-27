@@ -170,6 +170,7 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         tipoLabel.setText("Tipo:");
 
         tipoInput.setBackground(new java.awt.Color(255, 255, 255));
+        tipoInput.setForeground(new java.awt.Color(0, 0, 0));
         tipoInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Antibioticos", "Cosmeticos", "Fraldas" }));
 
         fornecedorLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
@@ -210,6 +211,12 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         precoCustoLabel.setForeground(new java.awt.Color(0, 0, 0));
         precoCustoLabel.setText("Preço Custo:");
 
+        precoCustoInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                precoCustoInputActionPerformed(evt);
+            }
+        });
+
         rsCustoLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         rsCustoLabel.setForeground(new java.awt.Color(0, 0, 0));
         rsCustoLabel.setText("R$: ");
@@ -217,6 +224,12 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
         precoVendaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         precoVendaLabel.setForeground(new java.awt.Color(0, 0, 0));
         precoVendaLabel.setText("Preço Venda:");
+
+        precoVendaInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                precoVendaInputActionPerformed(evt);
+            }
+        });
 
         rsVendaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         rsVendaLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -238,6 +251,11 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
 
         lucroInput.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         lucroInput.setEnabled(false);
+        lucroInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lucroInputActionPerformed(evt);
+            }
+        });
 
         rsLucroLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         rsLucroLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -437,6 +455,18 @@ public class tela_Prod_Cadastrar extends javax.swing.JFrame {
     private void limparButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparButtonActionPerformed
         limparCamposCadastro();
     }//GEN-LAST:event_limparButtonActionPerformed
+
+    private void lucroInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lucroInputActionPerformed
+
+    }//GEN-LAST:event_lucroInputActionPerformed
+
+    private void precoCustoInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoCustoInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_precoCustoInputActionPerformed
+
+    private void precoVendaInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoVendaInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_precoVendaInputActionPerformed
 
     /**
      * @param args the command line arguments
