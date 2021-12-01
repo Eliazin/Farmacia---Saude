@@ -16,7 +16,7 @@ public class mySql {
     private String servidor = "localhost:3306";
     private String nomeDoBanco = "farmacia";
     private String usuario = "root";
-    private String senha = "root";
+    private String senha = "barney007";
     
     public mySql(){
     

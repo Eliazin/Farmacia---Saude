@@ -135,6 +135,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
             }
         });
 
+        cpfInput.setForeground(new java.awt.Color(0, 0, 0));
         try {
             cpfInput.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
@@ -149,6 +150,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         nomeUserLabel.setText("Nome de Usuario: ");
 
         nomeUserOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeUserOutput.setForeground(new java.awt.Color(0, 0, 0));
         nomeUserOutput.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         nomeUserOutput.setEnabled(false);
 
@@ -157,6 +159,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         nomeLabel.setText("Nome: ");
 
         nomeOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        nomeOutput.setForeground(new java.awt.Color(0, 0, 0));
         nomeOutput.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         nomeOutput.setEnabled(false);
 
@@ -165,6 +168,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         emailLabel.setText("E-mail: ");
 
         emailOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        emailOutput.setForeground(new java.awt.Color(0, 0, 0));
         emailOutput.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         emailOutput.setEnabled(false);
 
@@ -172,6 +176,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         celularLabel.setForeground(new java.awt.Color(0, 0, 0));
         celularLabel.setText("Celular: ");
 
+        celularOutput.setForeground(new java.awt.Color(0, 0, 0));
         try {
             celularOutput.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ##### - ####")));
         } catch (java.text.ParseException ex) {
@@ -185,6 +190,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         ruaLabel.setText("Rua: ");
 
         ruaOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        ruaOutput.setForeground(new java.awt.Color(0, 0, 0));
         ruaOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         ruaOutput.setEnabled(false);
 
@@ -193,6 +199,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         bairroLabel.setText("Bairro: ");
 
         bairroOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        bairroOutput.setForeground(new java.awt.Color(0, 0, 0));
         bairroOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         bairroOutput.setEnabled(false);
 
@@ -201,6 +208,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         numeroLabel.setText("Número:");
 
         numeroOutput.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        numeroOutput.setForeground(new java.awt.Color(0, 0, 0));
         numeroOutput.setDisabledTextColor(java.awt.SystemColor.textInactiveText);
         numeroOutput.setEnabled(false);
 
@@ -208,6 +216,7 @@ public class tela_Cli_Consultar extends javax.swing.JFrame {
         cepLabel.setForeground(new java.awt.Color(0, 0, 0));
         cepLabel.setText("CEP: ");
 
+        cepOutput.setForeground(new java.awt.Color(0, 0, 0));
         try {
             cepOutput.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
         } catch (java.text.ParseException ex) {
