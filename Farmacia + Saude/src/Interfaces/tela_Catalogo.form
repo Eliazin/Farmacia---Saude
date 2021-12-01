@@ -76,18 +76,18 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="painelDorflex" max="32767" attributes="0"/>
-                      <Component id="painelRivotril" max="32767" attributes="0"/>
+                      <Component id="painelDorflex" alignment="0" max="32767" attributes="0"/>
+                      <Component id="painelRivotril" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="painelParacetamol" max="32767" attributes="0"/>
-                      <Component id="painelDoralgina" max="32767" attributes="0"/>
+                      <Component id="painelParacetamol" alignment="0" max="32767" attributes="0"/>
+                      <Component id="painelDoralgina" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="painelBeneroc" max="32767" attributes="0"/>
-                      <Component id="painelDipirona" max="32767" attributes="0"/>
+                      <Component id="painelBeneroc" alignment="0" max="32767" attributes="0"/>
+                      <Component id="painelDipirona" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -135,8 +135,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="descricaoDorflexLabel" max="32767" attributes="0"/>
-                          <Component id="imagemDorflex" max="32767" attributes="0"/>
+                          <Component id="descricaoDorflexLabel" alignment="0" max="32767" attributes="0"/>
+                          <Component id="imagemDorflex" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="precoDorflexLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
@@ -168,24 +168,42 @@
             <Component class="javax.swing.JLabel" name="imagemDorflex">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ryan_\OneDrive\Imagens\Dorflex.jpg"/>
+                  <Image iconType="3" name="/Imagens/dorflex.jpeg"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="descricaoDorflexLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Dorflex - 36 Comprimidos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="precoDorflexLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="R$: 15,00"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="comprarDorflexButton">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="COMPRAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comprarDorflexButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -207,19 +225,17 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="precoParacetamolLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="comprarParacetamolButton" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="descricaoParacetamolLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="precoParacetamolLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="comprarParacetamolButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="descricaoParacetamolLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -251,24 +267,42 @@
             <Component class="javax.swing.JLabel" name="imagemParacetamol">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ryan_\OneDrive\Imagens\paracetamol.jpg"/>
+                  <Image iconType="3" name="/Imagens/paracetamol.jpeg"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="descricaoParacetamolLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Paracetamol 750 mg"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="precoParacetamolLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="R$ 16,49"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="comprarParacetamolButton">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="COMPRAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comprarParacetamolButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -287,7 +321,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -314,8 +348,8 @@
                       <Component id="descricaoBenerocLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="precoBenerocLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="comprarBenerocButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="precoBenerocLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="comprarBenerocButton" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -326,24 +360,42 @@
             <Component class="javax.swing.JLabel" name="imagemBeneroc">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ryan_\OneDrive\Imagens\Beneroc.jpg"/>
+                  <Image iconType="3" name="/Imagens/Beneroc.jpg"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="descricaoBenerocLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Beneroc 100 drageas"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="precoBenerocLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="R$: 59,00"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="comprarBenerocButton">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="COMPRAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comprarBenerocButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -365,7 +417,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -373,7 +425,7 @@
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="comprarRivotrilButton" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="imagemRivotril" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="descricaoRivotrilLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -392,7 +444,7 @@
                       <Component id="imagemRivotril" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="descricaoRivotrilLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="27" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="precoRivotrilLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="comprarRivotrilButton" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -406,24 +458,42 @@
             <Component class="javax.swing.JLabel" name="imagemRivotril">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ryan_\OneDrive\Imagens\Rivotril.jpg"/>
+                  <Image iconType="3" name="/Imagens/rivotril.jpeg"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="descricaoRivotrilLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Rivotril 30 Tablets"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="precoRivotrilLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="R$: 30,99"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="comprarRivotrilButton">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="COMPRAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comprarRivotrilButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -445,11 +515,11 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="imagemDoralgina" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="descricaoDoralginaLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -470,7 +540,7 @@
                       <Component id="imagemDoralgina" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="descricaoDoralginaLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="24" max="32767" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="precoDoralginaLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="comprarDoralginaButton" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -484,24 +554,42 @@
             <Component class="javax.swing.JLabel" name="imagemDoralgina">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ryan_\OneDrive\Imagens\doralgina.png"/>
+                  <Image iconType="3" name="/Imagens/doralgina.jpeg"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="descricaoDoralginaLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Doralgina 20 Drageas"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="precoDoralginaLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="R$: 19,90"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="comprarDoralginaButton">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="COMPRAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comprarDoralginaButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -523,7 +611,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -531,7 +619,7 @@
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="comprarDipironaButton" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="imagemDipirona" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="descricaoDipironaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -548,11 +636,11 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Component id="comprarDipironaButton" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="imagemDipirona" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="descricaoDipironaLabel" min="-2" max="-2" attributes="0"/>
@@ -569,24 +657,42 @@
             <Component class="javax.swing.JLabel" name="imagemDipirona">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ryan_\OneDrive\Imagens\dipirona.jpg"/>
+                  <Image iconType="3" name="/Imagens/dipirona.jpeg"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="descricaoDipironaLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Dipirona 10 Comprimidos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="precoDipironaLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="RS: 8,99"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="comprarDipironaButton">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Leelawadee UI" size="11" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="COMPRAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comprarDipironaButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

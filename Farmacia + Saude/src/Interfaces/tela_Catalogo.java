@@ -18,6 +18,8 @@ public class tela_Catalogo extends javax.swing.JFrame {
     tela_Prod_Consultar telaProdConsultar   = new tela_Prod_Consultar();
     tela_Prod_Atualizar telaProdAtualizar   = new tela_Prod_Atualizar();*/
     
+    tela_Compra_Cliente comprar = new tela_Compra_Cliente();
+    
     public tela_Catalogo() {
         initComponents();
     }
@@ -83,13 +85,23 @@ public class tela_Catalogo extends javax.swing.JFrame {
         painelDorflex.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         painelDorflex.setPreferredSize(new java.awt.Dimension(198, 209));
 
-        imagemDorflex.setIcon(new javax.swing.ImageIcon("C:\\Users\\ryan_\\OneDrive\\Imagens\\Dorflex.jpg")); // NOI18N
+        imagemDorflex.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/dorflex.jpeg"))); // NOI18N
 
+        descricaoDorflexLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        descricaoDorflexLabel.setForeground(new java.awt.Color(0, 0, 0));
         descricaoDorflexLabel.setText("Dorflex - 36 Comprimidos");
 
+        precoDorflexLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        precoDorflexLabel.setForeground(new java.awt.Color(0, 0, 0));
         precoDorflexLabel.setText("R$: 15,00");
 
+        comprarDorflexButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         comprarDorflexButton.setText("COMPRAR");
+        comprarDorflexButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprarDorflexButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelDorflexLayout = new javax.swing.GroupLayout(painelDorflex);
         painelDorflex.setLayout(painelDorflexLayout);
@@ -124,13 +136,23 @@ public class tela_Catalogo extends javax.swing.JFrame {
         painelParacetamol.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         painelParacetamol.setPreferredSize(new java.awt.Dimension(207, 209));
 
-        imagemParacetamol.setIcon(new javax.swing.ImageIcon("C:\\Users\\ryan_\\OneDrive\\Imagens\\paracetamol.jpg")); // NOI18N
+        imagemParacetamol.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/paracetamol.jpeg"))); // NOI18N
 
+        descricaoParacetamolLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        descricaoParacetamolLabel.setForeground(new java.awt.Color(0, 0, 0));
         descricaoParacetamolLabel.setText("Paracetamol 750 mg");
 
+        precoParacetamolLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        precoParacetamolLabel.setForeground(new java.awt.Color(0, 0, 0));
         precoParacetamolLabel.setText("R$ 16,49");
 
+        comprarParacetamolButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         comprarParacetamolButton.setText("COMPRAR");
+        comprarParacetamolButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprarParacetamolButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelParacetamolLayout = new javax.swing.GroupLayout(painelParacetamol);
         painelParacetamol.setLayout(painelParacetamolLayout);
@@ -139,14 +161,13 @@ public class tela_Catalogo extends javax.swing.JFrame {
             .addGroup(painelParacetamolLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(painelParacetamolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelParacetamolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(painelParacetamolLayout.createSequentialGroup()
-                            .addComponent(precoParacetamolLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comprarParacetamolButton))
-                        .addGroup(painelParacetamolLayout.createSequentialGroup()
-                            .addComponent(descricaoParacetamolLabel)
-                            .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGroup(painelParacetamolLayout.createSequentialGroup()
+                        .addComponent(precoParacetamolLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(comprarParacetamolButton))
+                    .addGroup(painelParacetamolLayout.createSequentialGroup()
+                        .addComponent(descricaoParacetamolLabel)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelParacetamolLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(imagemParacetamol, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -169,13 +190,23 @@ public class tela_Catalogo extends javax.swing.JFrame {
         painelBeneroc.setBackground(new java.awt.Color(255, 255, 255));
         painelBeneroc.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        imagemBeneroc.setIcon(new javax.swing.ImageIcon("C:\\Users\\ryan_\\OneDrive\\Imagens\\Beneroc.jpg")); // NOI18N
+        imagemBeneroc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Beneroc.jpg"))); // NOI18N
 
+        descricaoBenerocLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        descricaoBenerocLabel.setForeground(new java.awt.Color(0, 0, 0));
         descricaoBenerocLabel.setText("Beneroc 100 drageas");
 
+        precoBenerocLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        precoBenerocLabel.setForeground(new java.awt.Color(0, 0, 0));
         precoBenerocLabel.setText("R$: 59,00");
 
+        comprarBenerocButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         comprarBenerocButton.setText("COMPRAR");
+        comprarBenerocButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprarBenerocButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBenerocLayout = new javax.swing.GroupLayout(painelBeneroc);
         painelBeneroc.setLayout(painelBenerocLayout);
@@ -212,13 +243,23 @@ public class tela_Catalogo extends javax.swing.JFrame {
         painelRivotril.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         painelRivotril.setPreferredSize(new java.awt.Dimension(198, 209));
 
-        imagemRivotril.setIcon(new javax.swing.ImageIcon("C:\\Users\\ryan_\\OneDrive\\Imagens\\Rivotril.jpg")); // NOI18N
+        imagemRivotril.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/rivotril.jpeg"))); // NOI18N
 
+        descricaoRivotrilLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        descricaoRivotrilLabel.setForeground(new java.awt.Color(0, 0, 0));
         descricaoRivotrilLabel.setText("Rivotril 30 Tablets");
 
+        precoRivotrilLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        precoRivotrilLabel.setForeground(new java.awt.Color(0, 0, 0));
         precoRivotrilLabel.setText("R$: 30,99");
 
+        comprarRivotrilButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         comprarRivotrilButton.setText("COMPRAR");
+        comprarRivotrilButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprarRivotrilButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelRivotrilLayout = new javax.swing.GroupLayout(painelRivotril);
         painelRivotril.setLayout(painelRivotrilLayout);
@@ -245,7 +286,7 @@ public class tela_Catalogo extends javax.swing.JFrame {
                 .addComponent(imagemRivotril)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(descricaoRivotrilLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(painelRivotrilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(precoRivotrilLabel, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(comprarRivotrilButton, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -256,13 +297,23 @@ public class tela_Catalogo extends javax.swing.JFrame {
         painelDoralgina.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         painelDoralgina.setPreferredSize(new java.awt.Dimension(207, 209));
 
-        imagemDoralgina.setIcon(new javax.swing.ImageIcon("C:\\Users\\ryan_\\OneDrive\\Imagens\\doralgina.png")); // NOI18N
+        imagemDoralgina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/doralgina.jpeg"))); // NOI18N
 
+        descricaoDoralginaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        descricaoDoralginaLabel.setForeground(new java.awt.Color(0, 0, 0));
         descricaoDoralginaLabel.setText("Doralgina 20 Drageas");
 
+        precoDoralginaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        precoDoralginaLabel.setForeground(new java.awt.Color(0, 0, 0));
         precoDoralginaLabel.setText("R$: 19,90");
 
+        comprarDoralginaButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         comprarDoralginaButton.setText("COMPRAR");
+        comprarDoralginaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprarDoralginaButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelDoralginaLayout = new javax.swing.GroupLayout(painelDoralgina);
         painelDoralgina.setLayout(painelDoralginaLayout);
@@ -288,7 +339,7 @@ public class tela_Catalogo extends javax.swing.JFrame {
                 .addComponent(imagemDoralgina)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(descricaoDoralginaLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(painelDoralginaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(precoDoralginaLabel, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(comprarDoralginaButton, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -299,13 +350,23 @@ public class tela_Catalogo extends javax.swing.JFrame {
         painelDipirona.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         painelDipirona.setPreferredSize(new java.awt.Dimension(198, 209));
 
-        imagemDipirona.setIcon(new javax.swing.ImageIcon("C:\\Users\\ryan_\\OneDrive\\Imagens\\dipirona.jpg")); // NOI18N
+        imagemDipirona.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/dipirona.jpeg"))); // NOI18N
 
+        descricaoDipironaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        descricaoDipironaLabel.setForeground(new java.awt.Color(0, 0, 0));
         descricaoDipironaLabel.setText("Dipirona 10 Comprimidos");
 
+        precoDipironaLabel.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
+        precoDipironaLabel.setForeground(new java.awt.Color(0, 0, 0));
         precoDipironaLabel.setText("RS: 8,99");
 
+        comprarDipironaButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         comprarDipironaButton.setText("COMPRAR");
+        comprarDipironaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprarDipironaButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelDipironaLayout = new javax.swing.GroupLayout(painelDipirona);
         painelDipirona.setLayout(painelDipironaLayout);
@@ -391,6 +452,30 @@ public class tela_Catalogo extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void comprarDorflexButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarDorflexButtonActionPerformed
+        comprar.setVisible(true);
+    }//GEN-LAST:event_comprarDorflexButtonActionPerformed
+
+    private void comprarParacetamolButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarParacetamolButtonActionPerformed
+        comprar.setVisible(true);
+    }//GEN-LAST:event_comprarParacetamolButtonActionPerformed
+
+    private void comprarBenerocButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarBenerocButtonActionPerformed
+comprar.setVisible(true);
+    }//GEN-LAST:event_comprarBenerocButtonActionPerformed
+
+    private void comprarRivotrilButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarRivotrilButtonActionPerformed
+comprar.setVisible(true);
+    }//GEN-LAST:event_comprarRivotrilButtonActionPerformed
+
+    private void comprarDoralginaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarDoralginaButtonActionPerformed
+comprar.setVisible(true);
+    }//GEN-LAST:event_comprarDoralginaButtonActionPerformed
+
+    private void comprarDipironaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarDipironaButtonActionPerformed
+comprar.setVisible(true);
+    }//GEN-LAST:event_comprarDipironaButtonActionPerformed
 
     /**
      * @param args the command line arguments

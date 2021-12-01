@@ -10,6 +10,7 @@ public class tela_Login extends javax.swing.JFrame {
     
     cadastro_Clientes cadastro = new cadastro_Clientes();
     tela_Menu menu = new tela_Menu();
+    tela_Menu_Cliente menuCliente = new tela_Menu_Cliente();
     
     public tela_Login() {
         initComponents();
@@ -157,6 +158,7 @@ public class tela_Login extends javax.swing.JFrame {
                
                if(senha.equals("1234")) {
                    JOptionPane.showMessageDialog(null, login + ", seja bem vindo à Farmácia + Saúde!");
+                   this.dispose(); menuCliente.setVisible(true);
                } else {
                    JOptionPane.showMessageDialog(null, "Usuario ou senha incorretos!!");
                }break;

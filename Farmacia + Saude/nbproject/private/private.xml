@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-        main
-            <file>file:/C:/Users/ryan_/OneDrive/Documentos/NetBeansProjects/Farmacia%20+%20Saude/Farmacia---Saude/Farmacia%20+%20Saude/src/Interfaces/tela_Catalogo.java</file>
-
-            <file>file:/home/luan/NetBeansProjects/Farmacia---Saude/Farmacia%20+%20Saude/src/Interfaces/tela_Atualizar.java</file>
-            <file>file:/home/luan/NetBeansProjects/Farmacia---Saude/Farmacia%20+%20Saude/src/Interfaces/tela_Menu_Cliente.java</file>
-            <file>file:/home/luan/NetBeansProjects/Farmacia---Saude/Farmacia%20+%20Saude/src/Banco_de_dados/mySql.java</file>
-          main
-        </group>
+        <group/>
     </open-files>
 </project-private>
