@@ -2,6 +2,7 @@
 package Interfaces_adm;
 
 import Interfaces.cadastro_Clientes;
+import Interfaces.tela_Catalogo;
 
 public class tela_Menu extends javax.swing.JFrame {
     
@@ -16,6 +17,8 @@ public class tela_Menu extends javax.swing.JFrame {
     tela_Prod_Cadastrar telaProdCadastrar   = new tela_Prod_Cadastrar();
     tela_Prod_Consultar telaProdConsultar   = new tela_Prod_Consultar();
     tela_Prod_Atualizar telaProdAtualizar   = new tela_Prod_Atualizar();
+    tela_Catalogo       catalogo            = new tela_Catalogo();
+    tela_Prod_Deletar   deletar             = new tela_Prod_Deletar();
     
     public tela_Menu() {
         initComponents();
@@ -98,16 +101,12 @@ public class tela_Menu extends javax.swing.JFrame {
         painelClientesLayout.setHorizontalGroup(
             painelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelClientesLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(painelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelClientesLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(painelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(atualizarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(consultarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                            .addComponent(cadastrarCliButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)))
-                    .addGroup(painelClientesLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(deletarCliButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(atualizarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(consultarCliButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                    .addComponent(cadastrarCliButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                    .addComponent(deletarCliButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelClientesLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -175,19 +174,12 @@ public class tela_Menu extends javax.swing.JFrame {
         painelFornecedoresLayout.setHorizontalGroup(
             painelFornecedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelFornecedoresLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(painelFornecedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelFornecedoresLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(atualizarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(painelFornecedoresLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(cadastrarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(painelFornecedoresLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(consultarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))
-                    .addGroup(painelFornecedoresLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(deletarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(atualizarFornButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cadastrarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(consultarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                    .addComponent(deletarFornButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelFornecedoresLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -240,6 +232,11 @@ public class tela_Menu extends javax.swing.JFrame {
 
         deletarProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         deletarProdButton.setText("Deletar");
+        deletarProdButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deletarProdButtonActionPerformed(evt);
+            }
+        });
 
         catalogoProdButton.setFont(new java.awt.Font("Leelawadee UI", 0, 11)); // NOI18N
         catalogoProdButton.setText("Catalogo");
@@ -373,8 +370,12 @@ public class tela_Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_atualizarProdButtonActionPerformed
 
     private void catalogoProdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catalogoProdButtonActionPerformed
-        // TODO add your handling code here:
+        catalogo.setVisible(true);
     }//GEN-LAST:event_catalogoProdButtonActionPerformed
+
+    private void deletarProdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletarProdButtonActionPerformed
+        deletar.setVisible(true);
+    }//GEN-LAST:event_deletarProdButtonActionPerformed
 
     /**
      * @param args the command line arguments

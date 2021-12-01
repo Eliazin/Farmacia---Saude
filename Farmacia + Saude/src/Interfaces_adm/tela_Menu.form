@@ -93,19 +93,12 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="atualizarCliButton1" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="consultarCliButton1" alignment="1" pref="133" max="32767" attributes="0"/>
-                                  <Component id="cadastrarCliButton1" pref="134" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="deletarCliButton1" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="atualizarCliButton1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="consultarCliButton1" alignment="1" pref="133" max="32767" attributes="0"/>
+                          <Component id="cadastrarCliButton1" pref="134" max="32767" attributes="0"/>
+                          <Component id="deletarCliButton1" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -211,23 +204,12 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="atualizarFornButton2" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cadastrarFornButton2" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="consultarFornButton2" pref="134" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="deletarFornButton2" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="atualizarFornButton2" alignment="1" max="32767" attributes="0"/>
+                          <Component id="cadastrarFornButton2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="consultarFornButton2" alignment="0" pref="134" max="32767" attributes="0"/>
+                          <Component id="deletarFornButton2" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -411,6 +393,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Deletar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deletarProdButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="catalogoProdButton">
               <Properties>
